@@ -1,1 +1,17 @@
-Fatal error: Declaration of TopicRepository::findAll(): array must be compatible with BaseRepository::findAll(string $table, string $orderBy = 'id ASC'): array in C:\xampp\htdocs\cursomyV3\app\Repositories\TopicRepository.php on line 19
+PS C:\xampp\htdocs\cursomyV3> C:\xampp\php\php.exe -S localhost:8000 -t public
+[Sun Aug 17 01:25:08 2025] PHP 8.2.12 Development Server (http://localhost:8000) started
+[Sun Aug 17 01:25:13 2025] [::1]:59363 Accepted
+[Sun Aug 17 01:25:13 2025] [::1]:59363 [200]: GET /
+[Sun Aug 17 01:25:13 2025] [::1]:59363 Closing
+[Sun Aug 17 01:25:13 2025] [::1]:56467 Accepted
+[Sun Aug 17 01:25:13 2025] [::1]:56467 [200]: GET /assets/js/main.js
+[Sun Aug 17 01:25:13 2025] [::1]:56467 Closing
+[Sun Aug 17 01:25:13 2025] [::1]:60932 Accepted
+[Sun Aug 17 01:25:13 2025] [::1]:60932 [200]: GET /assets/js/dashboard/index.js
+[Sun Aug 17 01:25:13 2025] [::1]:60932 Closing
+[Sun Aug 17 01:25:13 2025] [::1]:54178 Accepted
+[Sun Aug 17 01:25:13 2025] [::1]:54178 [200]: GET /api/dashboard/stats
+[Sun Aug 17 01:25:13 2025] [::1]:54178 Closing
+[Sun Aug 17 01:25:13 2025] [::1]:55932 Accepted
+[Sun Aug 17 01:25:13 2025] [::1]:55932 [200]: GET /api/dashboard/courses
+[Sun Aug 17 01:25:13 2025] [::1]:55932 Closing

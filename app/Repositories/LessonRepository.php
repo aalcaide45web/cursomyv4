@@ -100,6 +100,14 @@ class LessonRepository extends BaseRepository
         return (int) $stmt->fetchColumn();
     }
     
+    public function count(): int
+    {
+        $stmt = $this->db->prepare("SELECT COUNT(*) FROM lesson");
+        $stmt->execute();
+        
+        return (int) $stmt->fetchColumn();
+    }
+    
     public function updateDuration(int $id, float $durationSeconds): bool
     {
         $stmt = $this->db->prepare("UPDATE lesson SET duration_seconds = :duration_seconds WHERE id = :id");
