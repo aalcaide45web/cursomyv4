@@ -8,6 +8,7 @@ require_once __DIR__ . '/../Repositories/InstructorRepository.php';
 require_once __DIR__ . '/../Repositories/CourseRepository.php';
 require_once __DIR__ . '/../Repositories/SectionRepository.php';
 require_once __DIR__ . '/../Repositories/LessonRepository.php';
+require_once __DIR__ . '/../Repositories/AttachmentRepository.php';
 require_once __DIR__ . '/../Lib/JsonResponse.php';
 
 class DashboardController

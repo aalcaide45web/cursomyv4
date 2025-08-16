@@ -3,11 +3,13 @@
 // Incluir el router y controladores
 require_once __DIR__ . '/../app/Router.php';
 require_once __DIR__ . '/../app/Controllers/DashboardController.php';
+require_once __DIR__ . '/../app/Controllers/ScanController.php';
 
 // Crear instancia del router
 $router = new Router();
 
 // Definir rutas
+// Rutas del dashboard
 $router->get('/', function() {
     $controller = new DashboardController();
     $controller->index();
@@ -22,6 +24,27 @@ $router->get('/api/dashboard/stats', function() {
 $router->get('/api/dashboard/courses', function() {
     $controller = new DashboardController();
     $controller->getCourses();
+});
+
+// Rutas de escaneo
+$router->post('/api/scan/incremental', function() {
+    $controller = new ScanController();
+    $controller->incremental();
+});
+
+$router->post('/api/scan/rebuild', function() {
+    $controller = new ScanController();
+    $controller->rebuild();
+});
+
+$router->get('/api/scan/status', function() {
+    $controller = new ScanController();
+    $controller->status();
+});
+
+$router->get('/api/scan/files', function() {
+    $controller = new ScanController();
+    $controller->scannedFiles();
 });
 
 // Manejar la petición

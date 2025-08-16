@@ -89,6 +89,23 @@ CREATE TABLE scan_index (
   last_seen_at TEXT NOT NULL
 );
 
+-- Tabla para archivos adjuntos de secciones
+CREATE TABLE IF NOT EXISTS attachment (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    section_id INTEGER NOT NULL,
+    filename TEXT NOT NULL,
+    file_path TEXT NOT NULL,
+    file_size INTEGER NOT NULL,
+    file_type TEXT NOT NULL,
+    mime_type TEXT,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (section_id) REFERENCES section(id) ON DELETE CASCADE
+);
+
+-- Índices para mejor rendimiento
+CREATE INDEX IF NOT EXISTS idx_attachment_section ON attachment(section_id);
+CREATE INDEX IF NOT EXISTS idx_attachment_filename ON attachment(filename);
+
 -- Índices para mejorar el rendimiento
 CREATE INDEX idx_section_course ON section(course_id);
 CREATE INDEX idx_lesson_section ON lesson(section_id);
