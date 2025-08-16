@@ -1,0 +1,67 @@
+# Archivos de configuración local
+.env
+.env.local
+.env.production
+
+# Archivos de dependencias
+/vendor/
+/node_modules/
+
+# Archivos de base de datos
+*.db
+*.sqlite
+*.sqlite3
+
+# Archivos de log
+*.log
+/logs/
+
+# Archivos temporales
+*.tmp
+*.temp
+/tmp/
+
+# Archivos de IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de backup
+*.bak
+*.backup
+
+# Archivos de caché
+/cache/
+*.cache
+
+# Archivos de video (todos los formatos)
+*.mp4
+*.avi
+*.mov
+*.wmv
+*.flv
+*.webm
+*.mkv
+*.m4v
+*.3gp
+*.ogv
+*.ts
+*.mts
+*.m2ts
+*.divx
+*.xvid
+*.h264
+*.h265
+*.hevc
+*.vp8
+*.vp9
+*.theora
+
+# Carpeta de uploads y subcarpetas
+/uploads/
+uploads/
