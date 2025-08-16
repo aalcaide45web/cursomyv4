@@ -4,12 +4,19 @@ class LessonRepository extends BaseRepository
 {
     public function findById(int $id): ?array
     {
-        return parent::findById($id, 'lesson');
+        $stmt = $this->db->prepare("SELECT * FROM lesson WHERE id = ?");
+        $stmt->execute([$id]);
+        
+        $result = $stmt->fetch();
+        return $result ?: null;
     }
     
     public function findBySection(int $sectionId): array
     {
-        return $this->findBy('lesson', 'section_id', $sectionId, 'order_index ASC');
+        $stmt = $this->db->prepare("SELECT * FROM lesson WHERE section_id = ? ORDER BY order_index ASC");
+        $stmt->execute([$sectionId]);
+        
+        return $stmt->fetchAll();
     }
     
     public function findByCourse(int $courseId): array
@@ -27,12 +34,20 @@ class LessonRepository extends BaseRepository
     
     public function findByFilePath(string $filePath): ?array
     {
-        return $this->findOneBy('lesson', 'file_path', $filePath);
+        $stmt = $this->db->prepare("SELECT * FROM lesson WHERE file_path = ? LIMIT 1");
+        $stmt->execute([$filePath]);
+        
+        $result = $stmt->fetch();
+        return $result ?: null;
     }
     
     public function create(int $sectionId, string $name, string $filePath, int $orderIndex = 0): int
     {
-        return $this->insert('lesson', [
+        $columns = 'section_id, name, file_path, duration_seconds, thumb_path, order_index';
+        $placeholders = ':section_id, :name, :file_path, :duration_seconds, :thumb_path, :order_index';
+        
+        $stmt = $this->db->prepare("INSERT INTO lesson ({$columns}) VALUES ({$placeholders})");
+        $stmt->execute([
             'section_id' => $sectionId,
             'name' => $name,
             'file_path' => $filePath,
@@ -40,22 +55,37 @@ class LessonRepository extends BaseRepository
             'thumb_path' => null,
             'order_index' => $orderIndex
         ]);
+        
+        return (int) $this->db->lastInsertId();
     }
     
     public function update(int $id, array $data): bool
     {
         $updateData = array_filter($data, fn($key) => in_array($key, ['name', 'duration_seconds', 'thumb_path', 'order_index']), ARRAY_FILTER_USE_KEY);
-        return $this->update('lesson', $id, $updateData);
+        
+        if (empty($updateData)) {
+            return false;
+        }
+        
+        $setClause = implode(', ', array_map(fn($key) => "{$key} = :{$key}", array_keys($updateData)));
+        $stmt = $this->db->prepare("UPDATE lesson SET {$setClause} WHERE id = :id");
+        $updateData['id'] = $id;
+        
+        return $stmt->execute($updateData);
     }
     
     public function delete(int $id): bool
     {
-        return parent::delete('lesson', $id);
+        $stmt = $this->db->prepare("DELETE FROM lesson WHERE id = ?");
+        return $stmt->execute([$id]);
     }
     
     public function countBySection(int $sectionId): int
     {
-        return parent::count('lesson', 'section_id = ?', [$sectionId]);
+        $stmt = $this->db->prepare("SELECT COUNT(*) FROM lesson WHERE section_id = ?");
+        $stmt->execute([$sectionId]);
+        
+        return (int) $stmt->fetchColumn();
     }
     
     public function countByCourse(int $courseId): int
@@ -72,12 +102,14 @@ class LessonRepository extends BaseRepository
     
     public function updateDuration(int $id, float $durationSeconds): bool
     {
-        return $this->update($id, ['duration_seconds' => $durationSeconds]);
+        $stmt = $this->db->prepare("UPDATE lesson SET duration_seconds = :duration_seconds WHERE id = :id");
+        return $stmt->execute(['id' => $id, 'duration_seconds' => $durationSeconds]);
     }
     
     public function updateThumbnail(int $id, string $thumbPath): bool
     {
-        return $this->update($id, ['thumb_path' => $thumbPath]);
+        $stmt = $this->db->prepare("UPDATE lesson SET thumb_path = :thumb_path WHERE id = :id");
+        return $stmt->execute(['id' => $id, 'thumb_path' => $thumbPath]);
     }
     
     public function reorder(int $sectionId, array $lessonIds): bool

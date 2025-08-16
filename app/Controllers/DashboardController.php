@@ -1,5 +1,8 @@
 <?php declare(strict_types=1);
 
+// Incluir dependencias en orden correcto
+require_once __DIR__ . '/../Services/DB.php';
+require_once __DIR__ . '/../Repositories/BaseRepository.php';
 require_once __DIR__ . '/../Repositories/TopicRepository.php';
 require_once __DIR__ . '/../Repositories/InstructorRepository.php';
 require_once __DIR__ . '/../Repositories/CourseRepository.php';

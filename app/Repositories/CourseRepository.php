@@ -4,32 +4,53 @@ class CourseRepository extends BaseRepository
 {
     public function findById(int $id): ?array
     {
-        return parent::findById($id, 'course');
+        $stmt = $this->db->prepare("SELECT * FROM course WHERE id = ?");
+        $stmt->execute([$id]);
+        
+        $result = $stmt->fetch();
+        return $result ?: null;
     }
     
     public function findBySlug(string $slug): ?array
     {
-        return $this->findOneBy('course', 'slug', $slug);
+        $stmt = $this->db->prepare("SELECT * FROM course WHERE slug = ? LIMIT 1");
+        $stmt->execute([$slug]);
+        
+        $result = $stmt->fetch();
+        return $result ?: null;
     }
     
     public function findAllActive(): array
     {
-        return $this->findBy('course', 'is_deleted', 0, 'name ASC');
+        $stmt = $this->db->prepare("SELECT * FROM course WHERE is_deleted = 0 ORDER BY name ASC");
+        $stmt->execute();
+        
+        return $stmt->fetchAll();
     }
     
     public function findByTopic(int $topicId): array
     {
-        return $this->findBy('course', 'topic_id', $topicId, 'name ASC');
+        $stmt = $this->db->prepare("SELECT * FROM course WHERE topic_id = ? ORDER BY name ASC");
+        $stmt->execute([$topicId]);
+        
+        return $stmt->fetchAll();
     }
     
     public function findByInstructor(int $instructorId): array
     {
-        return $this->findBy('course', 'instructor_id', $instructorId, 'name ASC');
+        $stmt = $this->db->prepare("SELECT * FROM course WHERE instructor_id = ? ORDER BY name ASC");
+        $stmt->execute([$instructorId]);
+        
+        return $stmt->fetchAll();
     }
     
     public function create(array $data): int
     {
-        return $this->insert('course', [
+        $columns = 'topic_id, instructor_id, name, slug, cover_path, avg_rating, ratings_count, is_deleted';
+        $placeholders = ':topic_id, :instructor_id, :name, :slug, :cover_path, :avg_rating, :ratings_count, :is_deleted';
+        
+        $stmt = $this->db->prepare("INSERT INTO course ({$columns}) VALUES ({$placeholders})");
+        $stmt->execute([
             'topic_id' => $data['topic_id'],
             'instructor_id' => $data['instructor_id'],
             'name' => $data['name'],
@@ -39,40 +60,57 @@ class CourseRepository extends BaseRepository
             'ratings_count' => 0,
             'is_deleted' => 0
         ]);
+        
+        return (int) $this->db->lastInsertId();
     }
     
     public function update(int $id, array $data): bool
     {
         $updateData = array_filter($data, fn($key) => in_array($key, ['name', 'slug', 'cover_path']), ARRAY_FILTER_USE_KEY);
-        return $this->update('course', $id, $updateData);
+        
+        if (empty($updateData)) {
+            return false;
+        }
+        
+        $setClause = implode(', ', array_map(fn($key) => "{$key} = :{$key}", array_keys($updateData)));
+        $stmt = $this->db->prepare("UPDATE course SET {$setClause} WHERE id = :id");
+        $updateData['id'] = $id;
+        
+        return $stmt->execute($updateData);
     }
     
     public function softDelete(int $id): bool
     {
-        return $this->update('course', $id, ['is_deleted' => 1]);
+        $stmt = $this->db->prepare("UPDATE course SET is_deleted = 1 WHERE id = ?");
+        return $stmt->execute([$id]);
     }
     
     public function reactivate(int $id): bool
     {
-        return $this->update('course', $id, ['is_deleted' => 0]);
+        $stmt = $this->db->prepare("UPDATE course SET is_deleted = 0 WHERE id = ?");
+        return $stmt->execute([$id]);
     }
     
     public function updateRating(int $id, float $avgRating, int $ratingsCount): bool
     {
-        return $this->update('course', $id, [
-            'avg_rating' => $avgRating,
-            'ratings_count' => $ratingsCount
-        ]);
+        $stmt = $this->db->prepare("UPDATE course SET avg_rating = :avg_rating, ratings_count = :ratings_count WHERE id = :id");
+        return $stmt->execute(['id' => $id, 'avg_rating' => $avgRating, 'ratings_count' => $ratingsCount]);
     }
     
     public function count(): int
     {
-        return parent::count('course', 'is_deleted = 0');
+        $stmt = $this->db->prepare("SELECT COUNT(*) FROM course WHERE is_deleted = 0");
+        $stmt->execute();
+        
+        return (int) $stmt->fetchColumn();
     }
     
     public function countDeleted(): int
     {
-        return parent::count('course', 'is_deleted = 1');
+        $stmt = $this->db->prepare("SELECT COUNT(*) FROM course WHERE is_deleted = 1");
+        $stmt->execute();
+        
+        return (int) $stmt->fetchColumn();
     }
     
     public function getWithDetails(int $id): ?array

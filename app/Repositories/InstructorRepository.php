@@ -4,43 +4,59 @@ class InstructorRepository extends BaseRepository
 {
     public function findById(int $id): ?array
     {
-        return parent::findById($id, 'instructor');
+        $stmt = $this->db->prepare("SELECT * FROM instructor WHERE id = ?");
+        $stmt->execute([$id]);
+        
+        $result = $stmt->fetch();
+        return $result ?: null;
     }
     
     public function findBySlug(string $slug): ?array
     {
-        return $this->findOneBy('instructor', 'slug', $slug);
+        $stmt = $this->db->prepare("SELECT * FROM instructor WHERE slug = ? LIMIT 1");
+        $stmt->execute([$slug]);
+        
+        $result = $stmt->fetch();
+        return $result ?: null;
     }
     
     public function findAll(): array
     {
-        return parent::findAll('instructor', 'name ASC');
+        $stmt = $this->db->prepare("SELECT * FROM instructor ORDER BY name ASC");
+        $stmt->execute();
+        
+        return $stmt->fetchAll();
     }
     
     public function create(string $name, string $slug): int
     {
-        return $this->insert('instructor', [
-            'name' => $name,
-            'slug' => $slug
-        ]);
+        $columns = 'name, slug';
+        $placeholders = ':name, :slug';
+        
+        $stmt = $this->db->prepare("INSERT INTO instructor ({$columns}) VALUES ({$placeholders})");
+        $stmt->execute(['name' => $name, 'slug' => $slug]);
+        
+        return (int) $this->db->lastInsertId();
     }
     
     public function update(int $id, string $name, string $slug): bool
     {
-        return $this->update('instructor', $id, [
-            'name' => $name,
-            'slug' => $slug
-        ]);
+        $stmt = $this->db->prepare("UPDATE instructor SET name = :name, slug = :slug WHERE id = :id");
+        return $stmt->execute(['id' => $id, 'name' => $name, 'slug' => $slug]);
     }
     
     public function delete(int $id): bool
     {
-        return parent::delete('instructor', $id);
+        $stmt = $this->db->prepare("DELETE FROM instructor WHERE id = ?");
+        return $stmt->execute([$id]);
     }
     
     public function count(): int
     {
-        return parent::count('instructor');
+        $stmt = $this->db->prepare("SELECT COUNT(*) FROM instructor");
+        $stmt->execute();
+        
+        return (int) $stmt->fetchColumn();
     }
     
     public function findOrCreate(string $name, string $slug): array

@@ -4,43 +4,59 @@ class TopicRepository extends BaseRepository
 {
     public function findById(int $id): ?array
     {
-        return parent::findById($id, 'topic');
+        $stmt = $this->db->prepare("SELECT * FROM topic WHERE id = ?");
+        $stmt->execute([$id]);
+        
+        $result = $stmt->fetch();
+        return $result ?: null;
     }
     
     public function findBySlug(string $slug): ?array
     {
-        return $this->findOneBy('topic', 'slug', $slug);
+        $stmt = $this->db->prepare("SELECT * FROM topic WHERE slug = ? LIMIT 1");
+        $stmt->execute([$slug]);
+        
+        $result = $stmt->fetch();
+        return $result ?: null;
     }
     
     public function findAll(): array
     {
-        return parent::findAll('topic', 'name ASC');
+        $stmt = $this->db->prepare("SELECT * FROM topic ORDER BY name ASC");
+        $stmt->execute();
+        
+        return $stmt->fetchAll();
     }
     
     public function create(string $name, string $slug): int
     {
-        return $this->insert('topic', [
-            'name' => $name,
-            'slug' => $slug
-        ]);
+        $columns = 'name, slug';
+        $placeholders = ':name, :slug';
+        
+        $stmt = $this->db->prepare("INSERT INTO topic ({$columns}) VALUES ({$placeholders})");
+        $stmt->execute(['name' => $name, 'slug' => $slug]);
+        
+        return (int) $this->db->lastInsertId();
     }
     
     public function update(int $id, string $name, string $slug): bool
     {
-        return $this->update('topic', $id, [
-            'name' => $name,
-            'slug' => $slug
-        ]);
+        $stmt = $this->db->prepare("UPDATE topic SET name = :name, slug = :slug WHERE id = :id");
+        return $stmt->execute(['id' => $id, 'name' => $name, 'slug' => $slug]);
     }
     
     public function delete(int $id): bool
     {
-        return parent::delete('topic', $id);
+        $stmt = $this->db->prepare("DELETE FROM topic WHERE id = ?");
+        return $stmt->execute([$id]);
     }
     
     public function count(): int
     {
-        return parent::count('topic');
+        $stmt = $this->db->prepare("SELECT COUNT(*) FROM topic");
+        $stmt->execute();
+        
+        return (int) $stmt->fetchColumn();
     }
     
     public function findOrCreate(string $name, string $slug): array

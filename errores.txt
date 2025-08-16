@@ -1,0 +1,1 @@
+Fatal error: Declaration of TopicRepository::findAll(): array must be compatible with BaseRepository::findAll(string $table, string $orderBy = 'id ASC'): array in C:\xampp\htdocs\cursomyV3\app\Repositories\TopicRepository.php on line 19
