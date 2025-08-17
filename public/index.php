@@ -4,6 +4,7 @@
 require_once __DIR__ . '/../app/Router.php';
 require_once __DIR__ . '/../app/Controllers/DashboardController.php';
 require_once __DIR__ . '/../app/Controllers/ScanController.php';
+require_once __DIR__ . '/../app/Controllers/SearchController.php';
 
 // Crear instancia del router
 $router = new Router();
@@ -45,6 +46,12 @@ $router->get('/api/scan/status', function() {
 $router->get('/api/scan/files', function() {
     $controller = new ScanController();
     $controller->scannedFiles();
+});
+
+// Ruta de búsqueda
+$router->get('/api/search', function() {
+    $controller = new SearchController();
+    $controller->search();
 });
 
 // Manejar la petición

@@ -26,10 +26,143 @@ class Dashboard {
             rebuildBtn.addEventListener('click', () => this.scanRebuild());
         }
         
-        // Búsqueda global
+        // Búsqueda global con debounce
         const searchInput = document.getElementById('global-search');
         if (searchInput) {
-            searchInput.addEventListener('input', (e) => this.handleSearch(e.target.value));
+            let searchTimeout;
+            searchInput.addEventListener('input', (e) => {
+                clearTimeout(searchTimeout);
+                const query = e.target.value.trim();
+                
+                if (query.length === 0) {
+                    this.hideSearchResults();
+                    return;
+                }
+                
+                // Debounce de 300ms
+                searchTimeout = setTimeout(() => {
+                    this.performSearch(query);
+                }, 300);
+            });
+            
+            // Ocultar resultados al hacer clic fuera
+            document.addEventListener('click', (e) => {
+                if (!searchInput.contains(e.target) && !document.getElementById('search-results').contains(e.target)) {
+                    this.hideSearchResults();
+                }
+            });
+        }
+    }
+    
+    /**
+     * Realiza la búsqueda en tiempo real
+     */
+    async performSearch(query) {
+        try {
+            const response = await fetch(`/api/search?q=${encodeURIComponent(query)}&limit=10`);
+            const data = await response.json();
+            
+            if (data.success) {
+                this.displaySearchResults(data.data.results, query);
+            }
+        } catch (error) {
+            console.error('Error en la búsqueda:', error);
+        }
+    }
+    
+    /**
+     * Muestra los resultados de búsqueda
+     */
+    displaySearchResults(results, query) {
+        const searchResults = document.getElementById('search-results');
+        if (!searchResults) return;
+        
+        if (results.length === 0) {
+            searchResults.innerHTML = `
+                <div class="p-4 text-center text-slate-400">
+                    <p>No se encontraron resultados para "${query}"</p>
+                </div>
+            `;
+        } else {
+            const resultsHtml = results.map(result => this.createSearchResultItem(result)).join('');
+            searchResults.innerHTML = resultsHtml;
+        }
+        
+        searchResults.classList.remove('hidden');
+    }
+    
+    /**
+     * Crea un elemento de resultado de búsqueda
+     */
+    createSearchResultItem(result) {
+        const typeIcon = this.getTypeIcon(result.type);
+        const typeColor = this.getTypeColor(result.type);
+        
+        return `
+            <div class="p-3 hover:bg-slate-700 cursor-pointer border-b border-slate-600 last:border-b-0 transition-colors duration-150" 
+                 onclick="window.location.href='${result.url}'">
+                <div class="flex items-start space-x-3">
+                    <div class="flex-shrink-0">
+                        <div class="w-8 h-8 ${typeColor} rounded-lg flex items-center justify-center">
+                            ${typeIcon}
+                        </div>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <div class="text-sm font-medium text-slate-100 truncate">
+                            ${this.highlightQuery(result.title, result.query)}
+                        </div>
+                        <div class="text-xs text-slate-400 truncate">
+                            ${result.subtitle}
+                        </div>
+                        ${result.topic ? `<div class="text-xs text-slate-500 mt-1">${result.topic}</div>` : ''}
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+    
+    /**
+     * Obtiene el icono según el tipo de resultado
+     */
+    getTypeIcon(type) {
+        const icons = {
+            course: '<svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>',
+            lesson: '<svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>',
+            topic: '<svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path></svg>',
+            instructor: '<svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>'
+        };
+        return icons[type] || icons.course;
+    }
+    
+    /**
+     * Obtiene el color según el tipo de resultado
+     */
+    getTypeColor(type) {
+        const colors = {
+            course: 'bg-blue-600',
+            lesson: 'bg-green-600',
+            topic: 'bg-purple-600',
+            instructor: 'bg-orange-600'
+        };
+        return colors[type] || colors.course;
+    }
+    
+    /**
+     * Resalta la consulta en el texto
+     */
+    highlightQuery(text, query) {
+        if (!query) return text;
+        const regex = new RegExp(`(${query})`, 'gi');
+        return text.replace(regex, '<mark class="bg-yellow-500/30 text-yellow-200 px-1 rounded">$1</mark>');
+    }
+    
+    /**
+     * Oculta los resultados de búsqueda
+     */
+    hideSearchResults() {
+        const searchResults = document.getElementById('search-results');
+        if (searchResults) {
+            searchResults.classList.add('hidden');
         }
     }
     
@@ -121,30 +254,52 @@ class Dashboard {
     
     createCourseCard(course) {
         return `
-            <div class="glass p-6 rounded-xl">
-                <div class="aspect-video bg-gray-200 rounded-lg mb-4 flex items-center justify-center">
+            <div class="glass p-6 rounded-xl hover:bg-slate-700/50 transition-all duration-200">
+                <div class="aspect-video bg-slate-700 rounded-lg mb-4 flex items-center justify-center">
                     ${course.cover_path ? 
                         `<img src="${course.cover_path}" alt="${course.name}" class="w-full h-full object-cover rounded-lg">` :
-                        `<svg class="w-16 h-16 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        `<svg class="w-16 h-16 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>`
                     }
                 </div>
-                <h3 class="text-lg font-semibold text-gray-900 mb-2">${course.name}</h3>
-                <div class="text-sm text-gray-600 mb-3">
-                    <div>Instructor: ${course.instructor_name}</div>
-                    <div>Tema: ${course.topic_name}</div>
-                    <div class="flex items-center mt-2">
-                        <div class="flex text-yellow-400">
-                            ${this.generateStars(course.avg_rating)}
-                        </div>
-                        <span class="ml-2 text-gray-500">(${course.ratings_count})</span>
+                
+                <h3 class="text-lg font-semibold text-slate-100 mb-2 line-clamp-2">${course.name}</h3>
+                
+                <div class="space-y-2 mb-4">
+                    <div class="flex items-center text-sm text-slate-400">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                        </svg>
+                        ${course.instructor_name}
+                    </div>
+                    <div class="flex items-center text-sm text-slate-400">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
+                        </svg>
+                        ${course.topic_name}
                     </div>
                 </div>
+                
+                <div class="flex items-center mb-4">
+                    <div class="flex items-center">
+                        ${this.generateStars(course.avg_rating)}
+                    </div>
+                    <span class="text-sm text-slate-400 ml-2">(${course.ratings_count})</span>
+                </div>
+                
                 <div class="flex space-x-2">
-                    <button class="btn-primary flex-1">Ver</button>
-                    <button class="btn-secondary flex-1">Continuar</button>
-                    <button class="btn-outline">⋮</button>
+                    <button class="flex-1 btn-primary text-sm py-2">
+                        Ver
+                    </button>
+                    <button class="flex-1 btn-outline text-sm py-2">
+                        Continuar
+                    </button>
+                    <button class="px-3 py-2 text-slate-400 hover:text-slate-200 hover:bg-slate-700 rounded-lg transition-colors">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"></path>
+                        </svg>
+                    </button>
                 </div>
             </div>
         `;
@@ -286,12 +441,6 @@ class Dashboard {
                 notification.parentNode.removeChild(notification);
             }
         }, 5000);
-    }
-    
-    handleSearch(query) {
-        // Implementar búsqueda global
-        console.log('Búsqueda:', query);
-        // TODO: Implementar búsqueda en tiempo real
     }
 }
 
