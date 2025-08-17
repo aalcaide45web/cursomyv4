@@ -129,7 +129,7 @@ class PlayerApp {
                             <p class="text-xs text-slate-400">${this.formatFileSize(attachment.file_size)}</p>
                         </div>
                     </div>
-                    <a href="/uploads/${attachment.file_path}" 
+                    <a href="/video/${encodeURIComponent(attachment.file_path.replace(/\\/g, '/'))}" 
                        download="${attachment.filename}"
                        class="btn-outline text-xs px-3 py-1">
                         Descargar

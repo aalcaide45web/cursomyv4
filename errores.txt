@@ -1,20 +1,45 @@
-PS C:\xampp\htdocs\cursomyV3> C:\xampp\php\php.exe -S localhost:8000 -t public
-[Sun Aug 17 02:21:12 2025] PHP 8.2.12 Development Server (http://localhost:8000) started
-[Sun Aug 17 02:21:16 2025] [::1]:53502 Accepted
-[Sun Aug 17 02:21:16 2025] [::1]:65034 Accepted
-[Sun Aug 17 02:21:16 2025] [::1]:53502 [200]: GET /lesson?id=1
-[Sun Aug 17 02:21:16 2025] [::1]:53502 Closing
-[Sun Aug 17 02:21:16 2025] [::1]:54126 Accepted
-[Sun Aug 17 02:21:16 2025] [::1]:65034 [404]: GET /assets/js/player/index.js - No such file or directory
-[Sun Aug 17 02:21:16 2025] [::1]:54126 [200]: GET /assets/js/main.js
-[Sun Aug 17 02:21:16 2025] [::1]:65034 Closing
-[Sun Aug 17 02:21:16 2025] [::1]:54126 Closing
-[Sun Aug 17 02:21:16 2025] [::1]:58844 Accepted
-[Sun Aug 17 02:21:16 2025] [::1]:58844 [200]: GET /assets/js/dashboard/index.js
-[Sun Aug 17 02:21:16 2025] [::1]:58844 Closing
-[Sun Aug 17 02:21:16 2025] [::1]:65437 Accepted
-[Sun Aug 17 02:21:16 2025] [::1]:65321 Accepted
-[Sun Aug 17 02:21:16 2025] [::1]:65437 [200]: GET /api/dashboard/stats
-[Sun Aug 17 02:21:16 2025] [::1]:65437 Closing
-[Sun Aug 17 02:21:16 2025] [::1]:65321 [200]: GET /api/dashboard/courses
-[Sun Aug 17 02:21:16 2025] [::1]:65321 Closing
+(index):64 cdn.tailwindcss.com should not be used in production. To use Tailwind CSS in production, install it as a PostCSS plugin or use the Tailwind CLI: https://tailwindcss.com/docs/installation
+(anonymous) @ (index):64
+(anonymous) @ (index):64
+notes.js:2 📝 Sistema de notas inicializado
+comments.js:2 💬 Sistema de comentarios inicializado
+progress.js:2 📊 Progreso del player inicializado
+main.js:2 🚀 CursoMy LMS Lite iniciado
+main.js:9 ✅ DOM cargado completamente
+index.js:56 📚 Información de lección cargada: {lesson: {…}, section: {…}, course: {…}, attachments: Array(0)}
+video-player.js:35 🎬 VideoPlayer inicializado
+notes.js:28 📝 NotesManager inicializado
+comments.js:25 💬 CommentsManager inicializado
+progress.js:14 📊 ProgressManager inicializado
+tabs.js:18 📑 TabManager inicializado
+video-player.js:159 🎬 Configurando fuente de video: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\01 - Introducción al curso de HTML5 en español\001 - Introduccion al curso de HTML 5 desde cero _completo_.mp4
+index.js:40 🎬 PlayerApp inicializado correctamente
+notes.js:83 📝 Notas cargadas: 3
+001%20-%20Introduccion%20al%20curso%20de%20HTML%205%20desde%20cero%20_completo_.mp4:1  GET http://localhost:8000/uploads/Web/Victor%20Robles/1%20-%20Curso%20de%20HTML5%20desde%20cero_%20El%20m%C3%A1s%20completo%20en%20Espa%C3%B1ol/01%20-%20Introducci%C3%B3n%20al%20curso%20de%20HTML5%20en%20espa%C3%B1ol/001%20-%20Introduccion%20al%20curso%20de%20HTML%205%20desde%20cero%20_completo_.mp4 404 (Not Found)
+comments.js:62 💬 Comentarios cargados: 1
+main.js:42 🔄 Rebuild completo iniciado
+index.js:420 Resultado del escaneo: {success: true, data: {…}}
+progress.js:48  POST http://localhost:8000/api/lesson/progress 500 (Internal Server Error)
+saveProgress @ progress.js:48
+(anonymous) @ index.js:197
+Navigated to http://localhost:8000/lesson?id=1
+(index):64 cdn.tailwindcss.com should not be used in production. To use Tailwind CSS in production, install it as a PostCSS plugin or use the Tailwind CLI: https://tailwindcss.com/docs/installation
+(anonymous) @ (index):64
+(anonymous) @ (index):64
+notes.js:2 📝 Sistema de notas inicializado
+comments.js:2 💬 Sistema de comentarios inicializado
+progress.js:2 📊 Progreso del player inicializado
+main.js:2 🚀 CursoMy LMS Lite iniciado
+main.js:9 ✅ DOM cargado completamente
+index.js:56 📚 Información de lección cargada: {lesson: {…}, section: {…}, course: {…}, attachments: Array(0)}
+video-player.js:35 🎬 VideoPlayer inicializado
+notes.js:28 📝 NotesManager inicializado
+comments.js:25 💬 CommentsManager inicializado
+progress.js:14 📊 ProgressManager inicializado
+tabs.js:18 📑 TabManager inicializado
+video-player.js:159 🎬 Configurando fuente de video: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\01 - Introducción al curso de HTML5 en español\001 - Introduccion al curso de HTML 5 desde cero _completo_.mp4
+index.js:40 🎬 PlayerApp inicializado correctamente
+notes.js:83 📝 Notas cargadas: 3
+001%20-%20Introduccion%20al%20curso%20de%20HTML%205%20desde%20cero%20_completo_.mp4:1  GET http://localhost:8000/uploads/Web/Victor%20Robles/1%20-%20Curso%20de%20HTML5%20desde%20cero_%20El%20m%C3%A1s%20completo%20en%20Espa%C3%B1ol/01%20-%20Introducci%C3%B3n%20al%20curso%20de%20HTML5%20en%20espa%C3%B1ol/001%20-%20Introduccion%20al%20curso%20de%20HTML%205%20desde%20cero%20_completo_.mp4 404 (Not Found)
+comments.js:62 💬 Comentarios cargados: 1
+Navigated to chrome-error://chromewebdata/

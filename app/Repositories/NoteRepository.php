@@ -90,4 +90,15 @@ class NoteRepository extends BaseRepository
         $stmt->execute([$lessonId]);
         return (int) $stmt->fetchColumn();
     }
+    
+    /**
+     * Encuentra una nota por lección y timestamp
+     */
+    public function findByLessonAndTimestamp(int $lessonId, float $timestamp): ?array
+    {
+        $stmt = $this->db->prepare("SELECT * FROM note WHERE lesson_id = ? AND t_seconds = ? LIMIT 1");
+        $stmt->execute([$lessonId, $timestamp]);
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $result ?: null;
+    }
 }

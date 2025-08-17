@@ -51,6 +51,7 @@ class ProgressRepository extends BaseRepository
                 UPDATE progress 
                 SET last_t_seconds = ?, 
                     last_seen_at = datetime('now'),
+                    updated_at = datetime('now'),
                     total_watched_seconds = total_watched_seconds + ?
                 WHERE lesson_id = ?
             ");
@@ -63,8 +64,9 @@ class ProgressRepository extends BaseRepository
                     last_t_seconds, 
                     total_watched_seconds, 
                     last_seen_at, 
-                    created_at
-                ) VALUES (?, ?, ?, datetime('now'), datetime('now'))
+                    created_at,
+                    updated_at
+                ) VALUES (?, ?, ?, datetime('now'), datetime('now'), datetime('now'))
             ");
             return $stmt->execute([$lessonId, $position, $position]);
         }

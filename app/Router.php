@@ -25,6 +25,11 @@ class Router
         $this->routes['PATCH'][$path] = $handler;
     }
     
+    public function delete(string $path, callable $handler): void
+    {
+        $this->routes['DELETE'][$path] = $handler;
+    }
+    
     public function dispatch(string $method, string $uri): void
     {
         // Limpiar la URI

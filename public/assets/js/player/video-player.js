@@ -24,6 +24,10 @@ export class VideoPlayer {
             return;
         }
         
+        // Configurar volumen máximo y desmutear
+        this.video.volume = 1.0;
+        this.video.muted = false;
+        
         this.setupVideoEvents();
         this.setupCustomControls();
         this.setupKeyboardShortcuts();
@@ -152,8 +156,22 @@ export class VideoPlayer {
     
     setVideoSource(filePath) {
         if (this.video) {
-            this.video.src = `/uploads/${filePath}`;
+            console.log('🎬 Ruta original:', filePath);
+            // Convertir backslashes a forward slashes y codificar correctamente
+            const normalizedPath = filePath.replace(/\\/g, '/');
+            console.log('🎬 Ruta normalizada:', normalizedPath);
+            const encodedPath = encodeURIComponent(normalizedPath);
+            console.log('🎬 Ruta codificada:', encodedPath);
+            this.video.src = `/video/${encodedPath}`;
+            console.log('🎬 URL final del video:', this.video.src);
             this.video.load();
+            
+            // Configurar volumen máximo después de cargar
+            this.video.addEventListener('loadeddata', () => {
+                this.video.volume = 1.0;
+                this.video.muted = false;
+                console.log('🎬 Video cargado, volumen configurado al máximo');
+            }, { once: true });
         }
     }
     
@@ -173,6 +191,10 @@ export class VideoPlayer {
     seekToPercentage(percentage) {
         const newTime = (percentage / 100) * this.video.duration;
         this.video.currentTime = newTime;
+    }
+    
+    seekToTime(seconds) {
+        this.video.currentTime = seconds;
     }
     
     setPlaybackSpeed(speed) {

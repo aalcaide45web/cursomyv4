@@ -90,4 +90,15 @@ class CommentRepository extends BaseRepository
         $stmt->execute([$lessonId]);
         return (int) $stmt->fetchColumn();
     }
+    
+    /**
+     * Encuentra un comentario por lección y texto
+     */
+    public function findByLessonAndText(int $lessonId, string $text): ?array
+    {
+        $stmt = $this->db->prepare("SELECT * FROM comment WHERE lesson_id = ? AND text = ? LIMIT 1");
+        $stmt->execute([$lessonId, $text]);
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $result ?: null;
+    }
 }

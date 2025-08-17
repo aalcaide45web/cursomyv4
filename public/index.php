@@ -80,6 +80,16 @@ $router->post('/api/lesson/notes', function() {
     $controller->saveNote();
 });
 
+$router->patch('/api/lesson/notes', function() {
+    $controller = new PlayerController();
+    $controller->updateNote();
+});
+
+$router->delete('/api/lesson/notes', function() {
+    $controller = new PlayerController();
+    $controller->deleteNote();
+});
+
 $router->get('/api/lesson/comments', function() {
     $controller = new PlayerController();
     $controller->getComments();
@@ -88,6 +98,22 @@ $router->get('/api/lesson/comments', function() {
 $router->post('/api/lesson/comments', function() {
     $controller = new PlayerController();
     $controller->saveComment();
+});
+
+$router->patch('/api/lesson/comments', function() {
+    $controller = new PlayerController();
+    $controller->updateComment();
+});
+
+$router->delete('/api/lesson/comments', function() {
+    $controller = new PlayerController();
+    $controller->deleteComment();
+});
+
+// Ruta para servir archivos de video
+$router->get('/video/{path}', function($path) {
+    $controller = new PlayerController();
+    $controller->serveVideo($path);
 });
 
 // Manejar la petición

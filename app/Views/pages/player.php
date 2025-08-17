@@ -25,10 +25,32 @@
                         <option value="1.00" selected>1.00x</option>
                         <option value="1.25">1.25x</option>
                         <option value="1.50">1.50x</option>
+                        <option value="1.75">1.75x</option>
                         <option value="2.00">2.00x</option>
+                        <option value="2.25">2.25x</option>
+                        <option value="2.50">2.50x</option>
+                        <option value="2.75">2.75x</option>
                         <option value="3.00">3.00x</option>
+                        <option value="3.25">3.25x</option>
+                        <option value="3.50">3.50x</option>
+                        <option value="3.75">3.75x</option>
+                        <option value="4.00">4.00x</option>
+                        <option value="4.25">4.25x</option>
+                        <option value="4.50">4.50x</option>
+                        <option value="4.75">4.75x</option>
                         <option value="5.00">5.00x</option>
-                        <option value="10.00">10.00x</option>
+                        <option value="5.25">5.25x</option>
+                        <option value="5.50">5.50x</option>
+                        <option value="5.75">5.75x</option>
+                        <option value="6.00">6.00x</option>
+                        <option value="6.25">6.25x</option>
+                        <option value="6.50">6.50x</option>
+                        <option value="6.75">6.75x</option>
+                        <option value="7.00">7.00x</option>
+                        <option value="7.25">7.25x</option>
+                        <option value="7.50">7.50x</option>
+                        <option value="7.75">7.75x</option>
+                        <option value="8.00">8.00x</option>
                     </select>
                 </div>
                 
@@ -51,15 +73,15 @@
                 <video 
                     id="video-player" 
                     class="w-full h-full"
-                    controls
                     preload="metadata"
                     data-lesson-id=""
+                    muted
                 >
                     Tu navegador no soporta el elemento de video.
                 </video>
                 
                 <!-- Overlay de controles personalizados -->
-                <div id="custom-controls" class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 hidden">
+                <div id="custom-controls" class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
                     <!-- Barra de progreso personalizada -->
                     <div class="mb-4">
                         <div class="flex items-center space-x-2 text-white text-sm mb-1">
@@ -90,18 +112,18 @@
                             </svg>
                         </button>
                         
-                        <button id="rewind-10" class="p-2 text-white hover:bg-white/20 rounded transition-colors">
+                        <button id="rewind-10" class="p-2 text-white hover:bg-white/20 rounded transition-colors" title="Retroceder 10 segundos">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0019 16V8a1 1 0 00-1.6-.8l-5.334 4zM4.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0011 16V8a1 1 0 00-1.6-.8l-5.334 4z"></path>
                             </svg>
-                            <span class="text-xs">10s</span>
+                            <span class="text-xs">-10s</span>
                         </button>
                         
-                        <button id="forward-10" class="p-2 text-white hover:bg-white/20 rounded transition-colors">
+                        <button id="forward-10" class="p-2 text-white hover:bg-white/20 rounded transition-colors" title="Avanzar 10 segundos">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.878 9.878L3 3m6.878 6.878L21 21"></path>
                             </svg>
-                            <span class="text-xs">10s</span>
+                            <span class="text-xs">+10s</span>
                         </button>
                     </div>
                 </div>
@@ -157,7 +179,23 @@
                         </div>
                     </div>
                     
-                    <div id="notes-list" class="space-y-3">
+                    <!-- Buscador de notas -->
+                    <div class="mb-4">
+                        <div class="relative">
+                            <input 
+                                type="text" 
+                                id="note-search" 
+                                placeholder="🔍 Buscar en notas..." 
+                                class="w-full px-3 py-2 pl-10 bg-slate-700 border border-slate-600 rounded text-slate-200 placeholder-slate-400"
+                            >
+                            <svg class="absolute left-3 top-2.5 w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <!-- Lista de notas con scroll -->
+                    <div class="max-h-64 overflow-y-auto space-y-3 pr-2" id="notes-list">
                         <!-- Las notas se cargarán dinámicamente aquí -->
                     </div>
                 </div>

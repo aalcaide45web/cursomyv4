@@ -1,5 +1,16 @@
 <?php declare(strict_types=1);
 
+require_once __DIR__ . '/DB.php';
+require_once __DIR__ . '/LessonMetadataManager.php';
+require_once __DIR__ . '/../Repositories/TopicRepository.php';
+require_once __DIR__ . '/../Repositories/InstructorRepository.php';
+require_once __DIR__ . '/../Repositories/CourseRepository.php';
+require_once __DIR__ . '/../Repositories/SectionRepository.php';
+require_once __DIR__ . '/../Repositories/LessonRepository.php';
+require_once __DIR__ . '/../Repositories/AttachmentRepository.php';
+require_once __DIR__ . '/../Repositories/NoteRepository.php';
+require_once __DIR__ . '/../Repositories/CommentRepository.php';
+
 class CourseImporter
 {
     private array $config;
@@ -10,6 +21,9 @@ class CourseImporter
     private SectionRepository $sectionRepo;
     private LessonRepository $lessonRepo;
     private AttachmentRepository $attachmentRepo;
+    private LessonMetadataManager $metadataManager;
+    private NoteRepository $noteRepo;
+    private CommentRepository $commentRepo;
     
     public function __construct()
     {
@@ -21,6 +35,9 @@ class CourseImporter
         $this->sectionRepo = new SectionRepository();
         $this->lessonRepo = new LessonRepository();
         $this->attachmentRepo = new AttachmentRepository();
+        $this->metadataManager = new LessonMetadataManager();
+        $this->noteRepo = new NoteRepository();
+        $this->commentRepo = new CommentRepository();
     }
     
     /**
@@ -108,6 +125,9 @@ class CourseImporter
             if ($isVideo) {
                 // Es una CLASE/LECCIÓN
                 $lesson = $this->findOrCreateLesson($pathParts[4], $section['id'], $file['path']);
+                
+                // Sincronizar metadata del archivo JSON con la base de datos
+                $this->syncLessonMetadata($file['path'], $lesson['id']);
             } else {
                 // Es un RECURSO ADJUNTO - no crear lección, solo registrar
                 $this->registerAttachment($file['path'], $section['id'], $pathParts[4]);
@@ -294,6 +314,30 @@ class CourseImporter
             $this->attachmentRepo->create($sectionId, $filename, $filePath, $fileSize, $fileType, $mimeType);
         } catch (Exception $e) {
             error_log("Error registrando archivo adjunto: {$filePath} - " . $e->getMessage());
+        }
+    }
+    
+    /**
+     * Sincroniza la metadata de una lección desde el archivo JSON
+     */
+    private function syncLessonMetadata(string $filePath, int $lessonId): void
+    {
+        try {
+            // Verificar si existe archivo de metadata
+            $metadataPath = $this->metadataManager->getMetadataPath($filePath);
+            
+            if (file_exists($metadataPath)) {
+                error_log("🔄 Sincronizando metadata para lección {$lessonId} desde: {$metadataPath}");
+                
+                // Sincronizar con la base de datos
+                $this->metadataManager->syncWithDatabase($filePath, $lessonId, $this->noteRepo, $this->commentRepo);
+                
+                error_log("✅ Metadata sincronizada para lección {$lessonId}");
+            } else {
+                error_log("ℹ️ No hay metadata para sincronizar en lección {$lessonId}");
+            }
+        } catch (Exception $e) {
+            error_log("❌ Error sincronizando metadata para lección {$lessonId}: " . $e->getMessage());
         }
     }
 }
