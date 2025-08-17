@@ -1,57 +1,20 @@
 PS C:\xampp\htdocs\cursomyV3> C:\xampp\php\php.exe -S localhost:8000 -t public
-[Sun Aug 17 02:00:43 2025] PHP 8.2.12 Development Server (http://localhost:8000) started
-[Sun Aug 17 02:00:48 2025] [::1]:61814 Accepted
-[Sun Aug 17 02:00:48 2025] [::1]:62259 Accepted
-[Sun Aug 17 02:00:48 2025] [::1]:61814 [200]: GET /
-[Sun Aug 17 02:00:48 2025] [::1]:61814 Closing
-[Sun Aug 17 02:00:48 2025] [::1]:62259 [200]: GET /assets/js/main.js
-[Sun Aug 17 02:00:48 2025] [::1]:62259 Closing
-[Sun Aug 17 02:00:48 2025] [::1]:63866 Accepted
-[Sun Aug 17 02:00:48 2025] [::1]:63866 [200]: GET /assets/js/dashboard/index.js
-[Sun Aug 17 02:00:48 2025] [::1]:63866 Closing
-[Sun Aug 17 02:00:48 2025] [::1]:58424 Accepted
-[Sun Aug 17 02:00:48 2025] [::1]:61619 Accepted
-[Sun Aug 17 02:00:48 2025] [::1]:58424 [200]: GET /api/dashboard/stats
-[Sun Aug 17 02:00:48 2025] [::1]:58424 Closing
-[Sun Aug 17 02:00:48 2025] [::1]:61619 [200]: GET /api/dashboard/courses
-[Sun Aug 17 02:00:48 2025] [::1]:61619 Closing
-[Sun Aug 17 02:00:51 2025] [::1]:57025 Accepted
-[Sun Aug 17 02:00:51 2025] PHP Fatal error:  Uncaught Error: Cannot access protected property CourseRepository::$db in C:\xampp\htdocs\cursomyV3\app\Controllers\SearchController.php:131
-Stack trace:
-#0 C:\xampp\htdocs\cursomyV3\app\Controllers\SearchController.php(60): SearchController->searchCourses('h', 10)
-#1 C:\xampp\htdocs\cursomyV3\app\Controllers\SearchController.php(39): SearchController->performSearch('h', 10)
-#2 C:\xampp\htdocs\cursomyV3\public\index.php(54): SearchController->search()
-#3 C:\xampp\htdocs\cursomyV3\app\Router.php(40): {closure}()
-#4 C:\xampp\htdocs\cursomyV3\public\index.php(61): Router->dispatch('GET', '/api/search')
-#5 {main}
-  thrown in C:\xampp\htdocs\cursomyV3\app\Controllers\SearchController.php on line 131
-[Sun Aug 17 02:00:51 2025] [::1]:57025 [200]: GET /api/search?q=h&limit=10 - Uncaught Error: Cannot access protected property CourseRepository::$db in C:\xampp\htdocs\cursomyV3\app\Controllers\SearchController.php:131
-Stack trace:
-#0 C:\xampp\htdocs\cursomyV3\app\Controllers\SearchController.php(60): SearchController->searchCourses('h', 10)
-#1 C:\xampp\htdocs\cursomyV3\app\Controllers\SearchController.php(39): SearchController->performSearch('h', 10)
-#2 C:\xampp\htdocs\cursomyV3\public\index.php(54): SearchController->search()
-#3 C:\xampp\htdocs\cursomyV3\app\Router.php(40): {closure}()
-#4 C:\xampp\htdocs\cursomyV3\public\index.php(61): Router->dispatch('GET', '/api/search')
-#5 {main}
-  thrown in C:\xampp\htdocs\cursomyV3\app\Controllers\SearchController.php on line 131
-[Sun Aug 17 02:00:51 2025] [::1]:57025 Closing
-[Sun Aug 17 02:00:51 2025] [::1]:57990 Accepted
-[Sun Aug 17 02:00:51 2025] PHP Fatal error:  Uncaught Error: Cannot access protected property CourseRepository::$db in C:\xampp\htdocs\cursomyV3\app\Controllers\SearchController.php:131
-Stack trace:
-#0 C:\xampp\htdocs\cursomyV3\app\Controllers\SearchController.php(60): SearchController->searchCourses('ht', 10)
-#1 C:\xampp\htdocs\cursomyV3\app\Controllers\SearchController.php(39): SearchController->performSearch('ht', 10)
-#2 C:\xampp\htdocs\cursomyV3\public\index.php(54): SearchController->search()
-#3 C:\xampp\htdocs\cursomyV3\app\Router.php(40): {closure}()
-#4 C:\xampp\htdocs\cursomyV3\public\index.php(61): Router->dispatch('GET', '/api/search')
-#5 {main}
-  thrown in C:\xampp\htdocs\cursomyV3\app\Controllers\SearchController.php on line 131
-[Sun Aug 17 02:00:51 2025] [::1]:57990 [200]: GET /api/search?q=ht&limit=10 - Uncaught Error: Cannot access protected property CourseRepository::$db in C:\xampp\htdocs\cursomyV3\app\Controllers\SearchController.php:131
-Stack trace:
-#0 C:\xampp\htdocs\cursomyV3\app\Controllers\SearchController.php(60): SearchController->searchCourses('ht', 10)
-#1 C:\xampp\htdocs\cursomyV3\app\Controllers\SearchController.php(39): SearchController->performSearch('ht', 10)
-#2 C:\xampp\htdocs\cursomyV3\public\index.php(54): SearchController->search()
-#3 C:\xampp\htdocs\cursomyV3\app\Router.php(40): {closure}()
-#4 C:\xampp\htdocs\cursomyV3\public\index.php(61): Router->dispatch('GET', '/api/search')
-#5 {main}
-  thrown in C:\xampp\htdocs\cursomyV3\app\Controllers\SearchController.php on line 131
-[Sun Aug 17 02:00:51 2025] [::1]:57990 Closing
+[Sun Aug 17 02:21:12 2025] PHP 8.2.12 Development Server (http://localhost:8000) started
+[Sun Aug 17 02:21:16 2025] [::1]:53502 Accepted
+[Sun Aug 17 02:21:16 2025] [::1]:65034 Accepted
+[Sun Aug 17 02:21:16 2025] [::1]:53502 [200]: GET /lesson?id=1
+[Sun Aug 17 02:21:16 2025] [::1]:53502 Closing
+[Sun Aug 17 02:21:16 2025] [::1]:54126 Accepted
+[Sun Aug 17 02:21:16 2025] [::1]:65034 [404]: GET /assets/js/player/index.js - No such file or directory
+[Sun Aug 17 02:21:16 2025] [::1]:54126 [200]: GET /assets/js/main.js
+[Sun Aug 17 02:21:16 2025] [::1]:65034 Closing
+[Sun Aug 17 02:21:16 2025] [::1]:54126 Closing
+[Sun Aug 17 02:21:16 2025] [::1]:58844 Accepted
+[Sun Aug 17 02:21:16 2025] [::1]:58844 [200]: GET /assets/js/dashboard/index.js
+[Sun Aug 17 02:21:16 2025] [::1]:58844 Closing
+[Sun Aug 17 02:21:16 2025] [::1]:65437 Accepted
+[Sun Aug 17 02:21:16 2025] [::1]:65321 Accepted
+[Sun Aug 17 02:21:16 2025] [::1]:65437 [200]: GET /api/dashboard/stats
+[Sun Aug 17 02:21:16 2025] [::1]:65437 Closing
+[Sun Aug 17 02:21:16 2025] [::1]:65321 [200]: GET /api/dashboard/courses
+[Sun Aug 17 02:21:16 2025] [::1]:65321 Closing

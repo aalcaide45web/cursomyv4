@@ -5,6 +5,7 @@ require_once __DIR__ . '/../app/Router.php';
 require_once __DIR__ . '/../app/Controllers/DashboardController.php';
 require_once __DIR__ . '/../app/Controllers/ScanController.php';
 require_once __DIR__ . '/../app/Controllers/SearchController.php';
+require_once __DIR__ . '/../app/Controllers/PlayerController.php';
 
 // Crear instancia del router
 $router = new Router();
@@ -16,7 +17,6 @@ $router->get('/', function() {
     $controller->index();
 });
 
-// Rutas de API para el dashboard
 $router->get('/api/dashboard/stats', function() {
     $controller = new DashboardController();
     $controller->getStats();
@@ -52,6 +52,42 @@ $router->get('/api/scan/files', function() {
 $router->get('/api/search', function() {
     $controller = new SearchController();
     $controller->search();
+});
+
+// Rutas del reproductor
+$router->get('/lesson', function() {
+    $controller = new PlayerController();
+    $controller->index();
+});
+
+$router->get('/api/lesson/info', function() {
+    $controller = new PlayerController();
+    $controller->getLessonInfo();
+});
+
+$router->post('/api/lesson/progress', function() {
+    $controller = new PlayerController();
+    $controller->saveProgress();
+});
+
+$router->get('/api/lesson/notes', function() {
+    $controller = new PlayerController();
+    $controller->getNotes();
+});
+
+$router->post('/api/lesson/notes', function() {
+    $controller = new PlayerController();
+    $controller->saveNote();
+});
+
+$router->get('/api/lesson/comments', function() {
+    $controller = new PlayerController();
+    $controller->getComments();
+});
+
+$router->post('/api/lesson/comments', function() {
+    $controller = new PlayerController();
+    $controller->saveComment();
 });
 
 // Manejar la petición

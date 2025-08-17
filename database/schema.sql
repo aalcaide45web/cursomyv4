@@ -76,6 +76,11 @@ CREATE TABLE progress (
   id INTEGER PRIMARY KEY,
   lesson_id INTEGER NOT NULL,
   last_t_seconds REAL NOT NULL,
+  total_watched_seconds REAL DEFAULT 0,
+  is_completed INTEGER DEFAULT 0,
+  last_seen_at TEXT NOT NULL,
+  created_at TEXT NOT NULL,
+  completed_at TEXT,
   updated_at TEXT NOT NULL,
   FOREIGN KEY(lesson_id) REFERENCES lesson(id)
 );
