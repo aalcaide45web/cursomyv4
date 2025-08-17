@@ -8,4 +8,12 @@ abstract class BaseRepository
     {
         $this->db = DB::getInstance();
     }
+    
+    /**
+     * Obtiene la conexión PDO
+     */
+    public function getConnection(): PDO
+    {
+        return $this->db;
+    }
 }

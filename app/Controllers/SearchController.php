@@ -1,6 +1,7 @@
 <?php declare(strict_types=1);
 
 require_once __DIR__ . '/../Services/DB.php';
+require_once __DIR__ . '/../Repositories/BaseRepository.php';
 require_once __DIR__ . '/../Repositories/CourseRepository.php';
 require_once __DIR__ . '/../Repositories/LessonRepository.php';
 require_once __DIR__ . '/../Repositories/TopicRepository.php';
@@ -128,7 +129,7 @@ class SearchController
                 ORDER BY c.name ASC 
                 LIMIT :limit";
         
-        $stmt = $this->courseRepo->db->prepare($sql);
+        $stmt = $this->courseRepo->getConnection()->prepare($sql);
         $stmt->bindValue(':query', "%{$query}%", PDO::PARAM_STR);
         $stmt->bindValue(':limit', $limit, PDO::PARAM_INT);
         $stmt->execute();
@@ -148,7 +149,7 @@ class SearchController
                 ORDER BY l.name ASC 
                 LIMIT :limit";
         
-        $stmt = $this->lessonRepo->db->prepare($sql);
+        $stmt = $this->lessonRepo->getConnection()->prepare($sql);
         $stmt->bindValue(':query', "%{$query}%", PDO::PARAM_STR);
         $stmt->bindValue(':limit', $limit, PDO::PARAM_INT);
         $stmt->execute();
@@ -159,7 +160,7 @@ class SearchController
     private function searchTopics(string $query, int $limit): array
     {
         $sql = "SELECT * FROM topic WHERE name LIKE :query ORDER BY name ASC LIMIT :limit";
-        $stmt = $this->topicRepo->db->prepare($sql);
+        $stmt = $this->topicRepo->getConnection()->prepare($sql);
         $stmt->bindValue(':query', "%{$query}%", PDO::PARAM_STR);
         $stmt->bindValue(':limit', $limit, PDO::PARAM_INT);
         $stmt->execute();
@@ -170,7 +171,7 @@ class SearchController
     private function searchInstructors(string $query, int $limit): array
     {
         $sql = "SELECT * FROM instructor WHERE name LIKE :query ORDER BY name ASC LIMIT :limit";
-        $stmt = $this->instructorRepo->db->prepare($sql);
+        $stmt = $this->instructorRepo->getConnection()->prepare($sql);
         $stmt->bindValue(':query', "%{$query}%", PDO::PARAM_STR);
         $stmt->bindValue(':limit', $limit, PDO::PARAM_INT);
         $stmt->execute();

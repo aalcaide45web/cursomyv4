@@ -1,312 +1,57 @@
 PS C:\xampp\htdocs\cursomyV3> C:\xampp\php\php.exe -S localhost:8000 -t public
-[Sun Aug 17 01:43:20 2025] PHP 8.2.12 Development Server (http://localhost:8000) started
-[Sun Aug 17 01:43:25 2025] [::1]:55313 Accepted
-[Sun Aug 17 01:43:25 2025] [::1]:55313 [200]: GET /
-[Sun Aug 17 01:43:25 2025] [::1]:55313 Closing
-[Sun Aug 17 01:43:25 2025] [::1]:55639 Accepted
-[Sun Aug 17 01:43:25 2025] [::1]:55639 [200]: GET /assets/js/main.js
-[Sun Aug 17 01:43:25 2025] [::1]:55639 Closing
-[Sun Aug 17 01:43:25 2025] [::1]:51821 Accepted
-[Sun Aug 17 01:43:25 2025] [::1]:51821 [200]: GET /assets/js/dashboard/index.js
-[Sun Aug 17 01:43:25 2025] [::1]:51821 Closing
-[Sun Aug 17 01:43:25 2025] [::1]:58077 Accepted
-[Sun Aug 17 01:43:25 2025] [::1]:59075 Accepted
-[Sun Aug 17 01:43:25 2025] [::1]:58077 [200]: GET /api/dashboard/stats
-[Sun Aug 17 01:43:25 2025] [::1]:58077 Closing
-[Sun Aug 17 01:43:25 2025] [::1]:59075 [200]: GET /api/dashboard/courses
-[Sun Aug 17 01:43:25 2025] [::1]:59075 Closing
-[Sun Aug 17 01:43:29 2025] [::1]:59021 Accepted
-[Sun Aug 17 01:43:34 2025] === INICIANDO IMPORTACIÓN ===
-[Sun Aug 17 01:43:34 2025] Archivos a procesar: 39
-[Sun Aug 17 01:43:34 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\01 - Introducción al curso de HTML5 en español\001 - Introduccion al curso de HTML 5 desde cero _completo_.mp4
-[Sun Aug 17 01:43:34 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\01 - Introducción al curso de HTML5 en español\001 - Introduccion al curso de HTML 5 desde cero _completo_.mp4
-[Sun Aug 17 01:43:34 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\02 - Primeros pasos en HTML5\001 - Que es HTML y para que sirve Cual es la diferencia entre HTML5_ CSS y JS.mp4
-[Sun Aug 17 01:43:34 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\02 - Primeros pasos en HTML5\001 - Que es HTML y para que sirve Cual es la diferencia entre HTML5_ CSS y JS.mp4
-[Sun Aug 17 01:43:34 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\02 - Primeros pasos en HTML5\002 - Herramientas que necesitamos para empezar en el desarrollo web con HTML5.mp4
-[Sun Aug 17 01:43:34 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\02 - Primeros pasos en HTML5\002 - Herramientas que necesitamos para empezar en el desarrollo web con HTML5.mp4
-[Sun Aug 17 01:43:34 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\02 - Primeros pasos en HTML5\003 - Crear el primer documento HTML.mp4
-[Sun Aug 17 01:43:34 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\02 - Primeros pasos en HTML5\003 - Crear el primer documento HTML.mp4
-[Sun Aug 17 01:43:34 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\02 - Primeros pasos en HTML5\004 - Que es una etiqueta en HTML 5 y como funcionan.mp4        
-[Sun Aug 17 01:43:34 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\02 - Primeros pasos en HTML5\004 - Que es una etiqueta en HTML 5 y como funcionan.mp4
-[Sun Aug 17 01:43:34 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\02 - Primeros pasos en HTML5\005 - Estructura basica de una pagina web en HTML.mp4
-[Sun Aug 17 01:43:34 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\02 - Primeros pasos en HTML5\005 - Estructura basica de una pagina web en HTML.mp4
-[Sun Aug 17 01:43:34 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\03 - Encabezados y textos en HTML\001 - Encabezados.mp4
-[Sun Aug 17 01:43:34 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\03 - Encabezados y textos en HTML\001 - Encabezados.mp4
-[Sun Aug 17 01:43:34 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\03 - Encabezados y textos en HTML\002 - Etiquetas para textos.mp4
-[Sun Aug 17 01:43:34 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\03 - Encabezados y textos en HTML\002 - Etiquetas para textos.mp4
-[Sun Aug 17 01:43:34 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\04 - Estructura semántica en HTML5\001 - Estructura semantica de una web con HTML5.mp4       
-[Sun Aug 17 01:43:34 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\04 - Estructura semántica en HTML5\001 - Estructura semantica de una web con HTML5.mp4
-[Sun Aug 17 01:43:34 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\05 - Listas en HTML 5\001 - Listas en HTML.mp4
-[Sun Aug 17 01:43:34 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\05 - Listas en HTML 5\001 - Listas en HTML.mp4
-[Sun Aug 17 01:43:34 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\05 - Listas en HTML 5\002 - Listas de definicion.mp4
-[Sun Aug 17 01:43:34 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\05 - Listas en HTML 5\002 - Listas de definicion.mp4
-[Sun Aug 17 01:43:34 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\06 - Imágenes y multimedia\001 - Como poner una imagen en mi pagina web.mp4
-[Sun Aug 17 01:43:34 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\06 - Imágenes y multimedia\001 - Como poner una imagen en mi pagina web.mp4   
-[Sun Aug 17 01:43:34 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\06 - Imágenes y multimedia\002 - Como incrustar un video en un sitio web.mp4
-[Sun Aug 17 01:43:34 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\06 - Imágenes y multimedia\002 - Como incrustar un video en un sitio web.mp4  
-[Sun Aug 17 01:43:34 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\06 - Imágenes y multimedia\003 - Como poner un reproductor de audio en una pagina web.mp4    
-[Sun Aug 17 01:43:34 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\06 - Imágenes y multimedia\003 - Como poner un reproductor de audio en una pagina web.mp4
-[Sun Aug 17 01:43:34 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\06 - Imágenes y multimedia\004 - Figure y figcaption.mp4
-[Sun Aug 17 01:43:34 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\06 - Imágenes y multimedia\004 - Figure y figcaption.mp4
-[Sun Aug 17 01:43:34 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\06 - Imágenes y multimedia\005 - Como cargar una web externa_ un mapa y un video de youtube en mi web - iframe.mp4
-[Sun Aug 17 01:43:34 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\06 - Imágenes y multimedia\005 - Como cargar una web externa_ un mapa y un video de youtube en mi web - iframe.mp4
-[Sun Aug 17 01:43:34 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\07 - Enlaces y anclas en HTML5\001 - Enlaces.mp4
-[Sun Aug 17 01:43:34 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\07 - Enlaces y anclas en HTML5\001 - Enlaces.mp4
-[Sun Aug 17 01:43:34 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\07 - Enlaces y anclas en HTML5\002 - Anclas.mp4
-[Sun Aug 17 01:43:34 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\07 - Enlaces y anclas en HTML5\002 - Anclas.mp4
-[Sun Aug 17 01:43:34 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\08 - Tablas en HTML5\001 - Tablas de contenido en HTML.mp4
-[Sun Aug 17 01:43:34 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\08 - Tablas en HTML5\001 - Tablas de contenido en HTML.mp4
-[Sun Aug 17 01:43:34 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\09 - Elementos en línea y en bloque\001 - Diferencia entre elementos en linea y elementos en bloque.mp4
-[Sun Aug 17 01:43:34 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\09 - Elementos en línea y en bloque\001 - Diferencia entre elementos en linea y elementos en bloque.mp4
-[Sun Aug 17 01:43:34 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\10 - Formularios y validación en HTML5\001 - Crear formularios.mp4
-[Sun Aug 17 01:43:34 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\10 - Formularios y validación en HTML5\001 - Crear formularios.mp4
-[Sun Aug 17 01:43:34 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\10 - Formularios y validación en HTML5\002 - Campos para los formularios - Parte 1.mp4       
-[Sun Aug 17 01:43:34 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\10 - Formularios y validación en HTML5\002 - Campos para los formularios - Parte 1.mp4
-[Sun Aug 17 01:43:34 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\10 - Formularios y validación en HTML5\003 - Campos para los formularios - Parte 2.mp4       
-[Sun Aug 17 01:43:34 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\10 - Formularios y validación en HTML5\003 - Campos para los formularios - Parte 2.mp4
-[Sun Aug 17 01:43:34 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\10 - Formularios y validación en HTML5\004 - Validacion de formularios en HTML5.mp4
-[Sun Aug 17 01:43:34 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\10 - Formularios y validación en HTML5\004 - Validacion de formularios en HTML5.mp4
-[Sun Aug 17 01:43:34 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\11 - Más etiquetas y utilidades\001 - Mas etiquetas de HTML_ XHTML y HTML5.mp4
-[Sun Aug 17 01:43:34 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\11 - Más etiquetas y utilidades\001 - Mas etiquetas de HTML_ XHTML y HTML5.mp4
-[Sun Aug 17 01:43:34 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\11 - Más etiquetas y utilidades\002 - Favicon  Como poner icono a una pagina web.mp4
-[Sun Aug 17 01:43:34 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\11 - Más etiquetas y utilidades\002 - Favicon  Como poner icono a una pagina web.mp4
-[Sun Aug 17 01:43:34 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\001 - Ejercicio 1.mp4
-[Sun Aug 17 01:43:34 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\001 - Ejercicio 1.mp4       
-[Sun Aug 17 01:43:34 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\002 - Ejercicio 2.mp4
-[Sun Aug 17 01:43:34 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\002 - Ejercicio 2.mp4       
-[Sun Aug 17 01:43:34 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\003 - Ejercicio 3.mp4
-[Sun Aug 17 01:43:34 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\003 - Ejercicio 3.mp4       
-[Sun Aug 17 01:43:34 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\004 - Ejercicio 4.mp4
-[Sun Aug 17 01:43:34 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\004 - Ejercicio 4.mp4       
-[Sun Aug 17 01:43:34 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\005 - Ejercicio 5.mp4
-[Sun Aug 17 01:43:34 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\005 - Ejercicio 5.mp4       
-[Sun Aug 17 01:43:34 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\006 - Ejercicio 6.mp4
-[Sun Aug 17 01:43:34 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\006 - Ejercicio 6.mp4       
-[Sun Aug 17 01:43:34 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\007 - Ejercicio 7.mp4
-[Sun Aug 17 01:43:34 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\007 - Ejercicio 7.mp4       
-[Sun Aug 17 01:43:34 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\008 - Ejercicio 8.mp4
-[Sun Aug 17 01:43:34 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\008 - Ejercicio 8.mp4       
-[Sun Aug 17 01:43:34 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\009 - Ejercicio 9.mp4
-[Sun Aug 17 01:43:34 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\009 - Ejercicio 9.mp4       
-[Sun Aug 17 01:43:34 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\010 - Ejercicio 10_ 11 y 12.mp4
-[Sun Aug 17 01:43:34 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\010 - Ejercicio 10_ 11 y 12.mp4
-[Sun Aug 17 01:43:34 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\011 - Ejercicio 13 y 14 _ Final del proyecto web con HTML.mp4
-[Sun Aug 17 01:43:34 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\011 - Ejercicio 13 y 14 _ Final del proyecto web con HTML.mp4
-[Sun Aug 17 01:43:34 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\13 - Introducción rápida a CSS\001 - Lo basico de CSS - Parte 1.mp4
-[Sun Aug 17 01:43:34 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\13 - Introducción rápida a CSS\001 - Lo basico de CSS - Parte 1.mp4
-[Sun Aug 17 01:43:34 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\13 - Introducción rápida a CSS\002 - Lo basico de CSS - Parte 2.mp4
-[Sun Aug 17 01:43:34 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\13 - Introducción rápida a CSS\002 - Lo basico de CSS - Parte 2.mp4
-[Sun Aug 17 01:43:34 2025] === IMPORTACIÓN COMPLETADA ===
-[Sun Aug 17 01:43:34 2025] [::1]:59021 [400]: POST /api/scan/rebuild    
-[Sun Aug 17 01:43:34 2025] [::1]:59021 Closing
-[Sun Aug 17 01:44:09 2025] [::1]:62400 Accepted
-[Sun Aug 17 01:44:09 2025] [::1]:60927 Accepted
-[Sun Aug 17 01:44:09 2025] [::1]:62400 [200]: GET /
-[Sun Aug 17 01:44:09 2025] [::1]:62400 Closing
-[Sun Aug 17 01:44:09 2025] [::1]:60927 [200]: GET /assets/js/main.js    
-[Sun Aug 17 01:44:09 2025] [::1]:60927 Closing
-[Sun Aug 17 01:44:10 2025] [::1]:57036 Accepted
-[Sun Aug 17 01:44:10 2025] [::1]:57036 [200]: GET /assets/js/dashboard/index.js
-[Sun Aug 17 01:44:10 2025] [::1]:57036 Closing
-[Sun Aug 17 01:44:10 2025] [::1]:58862 Accepted
-[Sun Aug 17 01:44:10 2025] [::1]:50680 Accepted
-[Sun Aug 17 01:44:10 2025] [::1]:58862 [200]: GET /api/dashboard/stats  
-[Sun Aug 17 01:44:10 2025] [::1]:58862 Closing
-[Sun Aug 17 01:44:10 2025] [::1]:50680 [200]: GET /api/dashboard/courses
-[Sun Aug 17 01:44:10 2025] [::1]:50680 Closing
-[Sun Aug 17 01:44:13 2025] [::1]:51769 Accepted
-[Sun Aug 17 01:44:17 2025] === INICIANDO IMPORTACIÓN ===
-[Sun Aug 17 01:44:17 2025] Archivos a procesar: 39
-[Sun Aug 17 01:44:17 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\01 - Introducción al curso de HTML5 en español\001 - Introduccion al curso de HTML 5 desde cero _completo_.mp4
-[Sun Aug 17 01:44:17 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\01 - Introducción al curso de HTML5 en español\001 - Introduccion al curso de HTML 5 desde cero _completo_.mp4
-[Sun Aug 17 01:44:17 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\02 - Primeros pasos en HTML5\001 - Que es HTML y para que sirve Cual es la diferencia entre HTML5_ CSS y JS.mp4
-[Sun Aug 17 01:44:17 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\02 - Primeros pasos en HTML5\001 - Que es HTML y para que sirve Cual es la diferencia entre HTML5_ CSS y JS.mp4
-[Sun Aug 17 01:44:17 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\02 - Primeros pasos en HTML5\002 - Herramientas que necesitamos para empezar en el desarrollo web con HTML5.mp4
-[Sun Aug 17 01:44:17 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\02 - Primeros pasos en HTML5\002 - Herramientas que necesitamos para empezar en el desarrollo web con HTML5.mp4
-[Sun Aug 17 01:44:17 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\02 - Primeros pasos en HTML5\003 - Crear el primer documento HTML.mp4
-[Sun Aug 17 01:44:17 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\02 - Primeros pasos en HTML5\003 - Crear el primer documento HTML.mp4
-[Sun Aug 17 01:44:17 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\02 - Primeros pasos en HTML5\004 - Que es una etiqueta en HTML 5 y como funcionan.mp4        
-[Sun Aug 17 01:44:17 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\02 - Primeros pasos en HTML5\004 - Que es una etiqueta en HTML 5 y como funcionan.mp4
-[Sun Aug 17 01:44:17 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\02 - Primeros pasos en HTML5\005 - Estructura basica de una pagina web en HTML.mp4
-[Sun Aug 17 01:44:17 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\02 - Primeros pasos en HTML5\005 - Estructura basica de una pagina web en HTML.mp4
-[Sun Aug 17 01:44:17 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\03 - Encabezados y textos en HTML\001 - Encabezados.mp4
-[Sun Aug 17 01:44:17 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\03 - Encabezados y textos en HTML\001 - Encabezados.mp4
-[Sun Aug 17 01:44:17 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\03 - Encabezados y textos en HTML\002 - Etiquetas para textos.mp4
-[Sun Aug 17 01:44:17 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\03 - Encabezados y textos en HTML\002 - Etiquetas para textos.mp4
-[Sun Aug 17 01:44:17 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\04 - Estructura semántica en HTML5\001 - Estructura semantica de una web con HTML5.mp4       
-[Sun Aug 17 01:44:17 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\04 - Estructura semántica en HTML5\001 - Estructura semantica de una web con HTML5.mp4
-[Sun Aug 17 01:44:17 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\05 - Listas en HTML 5\001 - Listas en HTML.mp4
-[Sun Aug 17 01:44:17 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\05 - Listas en HTML 5\001 - Listas en HTML.mp4
-[Sun Aug 17 01:44:17 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\05 - Listas en HTML 5\002 - Listas de definicion.mp4
-[Sun Aug 17 01:44:17 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\05 - Listas en HTML 5\002 - Listas de definicion.mp4
-[Sun Aug 17 01:44:17 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\06 - Imágenes y multimedia\001 - Como poner una imagen en mi pagina web.mp4
-[Sun Aug 17 01:44:17 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\06 - Imágenes y multimedia\001 - Como poner una imagen en mi pagina web.mp4   
-[Sun Aug 17 01:44:17 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\06 - Imágenes y multimedia\002 - Como incrustar un video en un sitio web.mp4
-[Sun Aug 17 01:44:17 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\06 - Imágenes y multimedia\002 - Como incrustar un video en un sitio web.mp4  
-[Sun Aug 17 01:44:17 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\06 - Imágenes y multimedia\003 - Como poner un reproductor de audio en una pagina web.mp4    
-[Sun Aug 17 01:44:17 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\06 - Imágenes y multimedia\003 - Como poner un reproductor de audio en una pagina web.mp4
-[Sun Aug 17 01:44:17 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\06 - Imágenes y multimedia\004 - Figure y figcaption.mp4
-[Sun Aug 17 01:44:17 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\06 - Imágenes y multimedia\004 - Figure y figcaption.mp4
-[Sun Aug 17 01:44:17 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\06 - Imágenes y multimedia\005 - Como cargar una web externa_ un mapa y un video de youtube en mi web - iframe.mp4
-[Sun Aug 17 01:44:17 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\06 - Imágenes y multimedia\005 - Como cargar una web externa_ un mapa y un video de youtube en mi web - iframe.mp4
-[Sun Aug 17 01:44:17 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\07 - Enlaces y anclas en HTML5\001 - Enlaces.mp4
-[Sun Aug 17 01:44:17 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\07 - Enlaces y anclas en HTML5\001 - Enlaces.mp4
-[Sun Aug 17 01:44:17 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\07 - Enlaces y anclas en HTML5\002 - Anclas.mp4
-[Sun Aug 17 01:44:17 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\07 - Enlaces y anclas en HTML5\002 - Anclas.mp4
-[Sun Aug 17 01:44:17 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\08 - Tablas en HTML5\001 - Tablas de contenido en HTML.mp4
-[Sun Aug 17 01:44:17 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\08 - Tablas en HTML5\001 - Tablas de contenido en HTML.mp4
-[Sun Aug 17 01:44:17 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\09 - Elementos en línea y en bloque\001 - Diferencia entre elementos en linea y elementos en bloque.mp4
-[Sun Aug 17 01:44:17 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\09 - Elementos en línea y en bloque\001 - Diferencia entre elementos en linea y elementos en bloque.mp4
-[Sun Aug 17 01:44:17 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\10 - Formularios y validación en HTML5\001 - Crear formularios.mp4
-[Sun Aug 17 01:44:17 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\10 - Formularios y validación en HTML5\001 - Crear formularios.mp4
-[Sun Aug 17 01:44:17 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\10 - Formularios y validación en HTML5\002 - Campos para los formularios - Parte 1.mp4       
-[Sun Aug 17 01:44:17 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\10 - Formularios y validación en HTML5\002 - Campos para los formularios - Parte 1.mp4
-[Sun Aug 17 01:44:17 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\10 - Formularios y validación en HTML5\003 - Campos para los formularios - Parte 2.mp4       
-[Sun Aug 17 01:44:17 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\10 - Formularios y validación en HTML5\003 - Campos para los formularios - Parte 2.mp4
-[Sun Aug 17 01:44:17 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\10 - Formularios y validación en HTML5\004 - Validacion de formularios en HTML5.mp4
-[Sun Aug 17 01:44:17 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\10 - Formularios y validación en HTML5\004 - Validacion de formularios en HTML5.mp4
-[Sun Aug 17 01:44:17 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\11 - Más etiquetas y utilidades\001 - Mas etiquetas de HTML_ XHTML y HTML5.mp4
-[Sun Aug 17 01:44:17 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\11 - Más etiquetas y utilidades\001 - Mas etiquetas de HTML_ XHTML y HTML5.mp4
-[Sun Aug 17 01:44:17 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\11 - Más etiquetas y utilidades\002 - Favicon  Como poner icono a una pagina web.mp4
-[Sun Aug 17 01:44:17 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\11 - Más etiquetas y utilidades\002 - Favicon  Como poner icono a una pagina web.mp4
-[Sun Aug 17 01:44:17 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\001 - Ejercicio 1.mp4
-[Sun Aug 17 01:44:17 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\001 - Ejercicio 1.mp4       
-[Sun Aug 17 01:44:17 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\002 - Ejercicio 2.mp4
-[Sun Aug 17 01:44:17 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\002 - Ejercicio 2.mp4       
-[Sun Aug 17 01:44:17 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\003 - Ejercicio 3.mp4
-[Sun Aug 17 01:44:17 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\003 - Ejercicio 3.mp4       
-[Sun Aug 17 01:44:17 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\004 - Ejercicio 4.mp4
-[Sun Aug 17 01:44:17 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\004 - Ejercicio 4.mp4       
-[Sun Aug 17 01:44:17 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\005 - Ejercicio 5.mp4
-[Sun Aug 17 01:44:17 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\005 - Ejercicio 5.mp4       
-[Sun Aug 17 01:44:17 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\006 - Ejercicio 6.mp4
-[Sun Aug 17 01:44:17 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\006 - Ejercicio 6.mp4       
-[Sun Aug 17 01:44:17 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\007 - Ejercicio 7.mp4
-[Sun Aug 17 01:44:17 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\007 - Ejercicio 7.mp4       
-[Sun Aug 17 01:44:17 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\008 - Ejercicio 8.mp4
-[Sun Aug 17 01:44:17 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\008 - Ejercicio 8.mp4       
-[Sun Aug 17 01:44:17 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\009 - Ejercicio 9.mp4
-[Sun Aug 17 01:44:17 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\009 - Ejercicio 9.mp4       
-[Sun Aug 17 01:44:17 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\010 - Ejercicio 10_ 11 y 12.mp4
-[Sun Aug 17 01:44:17 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\010 - Ejercicio 10_ 11 y 12.mp4
-[Sun Aug 17 01:44:17 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\011 - Ejercicio 13 y 14 _ Final del proyecto web con HTML.mp4
-[Sun Aug 17 01:44:17 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\011 - Ejercicio 13 y 14 _ Final del proyecto web con HTML.mp4
-[Sun Aug 17 01:44:17 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\13 - Introducción rápida a CSS\001 - Lo basico de CSS - Parte 1.mp4
-[Sun Aug 17 01:44:17 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\13 - Introducción rápida a CSS\001 - Lo basico de CSS - Parte 1.mp4
-[Sun Aug 17 01:44:17 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\13 - Introducción rápida a CSS\002 - Lo basico de CSS - Parte 2.mp4
-[Sun Aug 17 01:44:17 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\13 - Introducción rápida a CSS\002 - Lo basico de CSS - Parte 2.mp4
-[Sun Aug 17 01:44:17 2025] === IMPORTACIÓN COMPLETADA ===
-[Sun Aug 17 01:44:17 2025] [::1]:51769 [400]: POST /api/scan/rebuild    
-[Sun Aug 17 01:44:17 2025] [::1]:51769 Closing
-[Sun Aug 17 01:45:20 2025] [::1]:64023 Accepted
-[Sun Aug 17 01:45:20 2025] [::1]:64023 [200]: GET /
-[Sun Aug 17 01:45:20 2025] [::1]:64023 Closing
-[Sun Aug 17 01:45:20 2025] [::1]:64963 Accepted
-[Sun Aug 17 01:45:20 2025] [::1]:64963 [200]: GET /assets/js/main.js
-[Sun Aug 17 01:45:20 2025] [::1]:64963 Closing
-[Sun Aug 17 01:45:20 2025] [::1]:63884 Accepted
-[Sun Aug 17 01:45:20 2025] [::1]:63884 [200]: GET /assets/js/dashboard/index.js
-[Sun Aug 17 01:45:20 2025] [::1]:63884 Closing
-[Sun Aug 17 01:45:20 2025] [::1]:63432 Accepted
-[Sun Aug 17 01:45:20 2025] [::1]:53827 Accepted
-[Sun Aug 17 01:45:20 2025] [::1]:63432 [200]: GET /api/dashboard/stats  
-[Sun Aug 17 01:45:20 2025] [::1]:63432 Closing
-[Sun Aug 17 01:45:20 2025] [::1]:62600 Accepted
-[Sun Aug 17 01:45:20 2025] [::1]:53827 [200]: GET /api/dashboard/courses
-[Sun Aug 17 01:45:20 2025] [::1]:53827 Closing
-[Sun Aug 17 01:45:20 2025] [::1]:62600 [404]: GET /favicon.ico - No such file or directory
-[Sun Aug 17 01:45:20 2025] [::1]:62600 Closing
-[Sun Aug 17 01:45:23 2025] [::1]:64635 Accepted
-[Sun Aug 17 01:45:23 2025] === INICIANDO REBUILD ===
-[Sun Aug 17 01:45:28 2025] Archivos escaneados: 39
-[Sun Aug 17 01:45:28 2025] === INICIANDO IMPORTACIÓN ===
-[Sun Aug 17 01:45:28 2025] Archivos a procesar: 39
-[Sun Aug 17 01:45:28 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\01 - Introducción al curso de HTML5 en español\001 - Introduccion al curso de HTML 5 desde cero _completo_.mp4
-[Sun Aug 17 01:45:28 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\01 - Introducción al curso de HTML5 en español\001 - Introduccion al curso de HTML 5 desde cero _completo_.mp4
-[Sun Aug 17 01:45:28 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\02 - Primeros pasos en HTML5\001 - Que es HTML y para que sirve Cual es la diferencia entre HTML5_ CSS y JS.mp4
-[Sun Aug 17 01:45:28 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\02 - Primeros pasos en HTML5\001 - Que es HTML y para que sirve Cual es la diferencia entre HTML5_ CSS y JS.mp4
-[Sun Aug 17 01:45:28 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\02 - Primeros pasos en HTML5\002 - Herramientas que necesitamos para empezar en el desarrollo web con HTML5.mp4
-[Sun Aug 17 01:45:28 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\02 - Primeros pasos en HTML5\002 - Herramientas que necesitamos para empezar en el desarrollo web con HTML5.mp4
-[Sun Aug 17 01:45:28 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\02 - Primeros pasos en HTML5\003 - Crear el primer documento HTML.mp4
-[Sun Aug 17 01:45:28 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\02 - Primeros pasos en HTML5\003 - Crear el primer documento HTML.mp4
-[Sun Aug 17 01:45:28 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\02 - Primeros pasos en HTML5\004 - Que es una etiqueta en HTML 5 y como funcionan.mp4        
-[Sun Aug 17 01:45:28 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\02 - Primeros pasos en HTML5\004 - Que es una etiqueta en HTML 5 y como funcionan.mp4
-[Sun Aug 17 01:45:28 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\02 - Primeros pasos en HTML5\005 - Estructura basica de una pagina web en HTML.mp4
-[Sun Aug 17 01:45:28 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\02 - Primeros pasos en HTML5\005 - Estructura basica de una pagina web en HTML.mp4
-[Sun Aug 17 01:45:28 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\03 - Encabezados y textos en HTML\001 - Encabezados.mp4
-[Sun Aug 17 01:45:28 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\03 - Encabezados y textos en HTML\001 - Encabezados.mp4
-[Sun Aug 17 01:45:28 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\03 - Encabezados y textos en HTML\002 - Etiquetas para textos.mp4
-[Sun Aug 17 01:45:28 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\03 - Encabezados y textos en HTML\002 - Etiquetas para textos.mp4
-[Sun Aug 17 01:45:28 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\04 - Estructura semántica en HTML5\001 - Estructura semantica de una web con HTML5.mp4       
-[Sun Aug 17 01:45:28 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\04 - Estructura semántica en HTML5\001 - Estructura semantica de una web con HTML5.mp4
-[Sun Aug 17 01:45:28 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\05 - Listas en HTML 5\001 - Listas en HTML.mp4
-[Sun Aug 17 01:45:28 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\05 - Listas en HTML 5\001 - Listas en HTML.mp4
-[Sun Aug 17 01:45:28 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\05 - Listas en HTML 5\002 - Listas de definicion.mp4
-[Sun Aug 17 01:45:28 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\05 - Listas en HTML 5\002 - Listas de definicion.mp4
-[Sun Aug 17 01:45:28 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\06 - Imágenes y multimedia\001 - Como poner una imagen en mi pagina web.mp4
-[Sun Aug 17 01:45:28 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\06 - Imágenes y multimedia\001 - Como poner una imagen en mi pagina web.mp4   
-[Sun Aug 17 01:45:28 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\06 - Imágenes y multimedia\002 - Como incrustar un video en un sitio web.mp4
-[Sun Aug 17 01:45:28 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\06 - Imágenes y multimedia\002 - Como incrustar un video en un sitio web.mp4  
-[Sun Aug 17 01:45:28 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\06 - Imágenes y multimedia\003 - Como poner un reproductor de audio en una pagina web.mp4    
-[Sun Aug 17 01:45:28 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\06 - Imágenes y multimedia\003 - Como poner un reproductor de audio en una pagina web.mp4
-[Sun Aug 17 01:45:28 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\06 - Imágenes y multimedia\004 - Figure y figcaption.mp4
-[Sun Aug 17 01:45:28 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\06 - Imágenes y multimedia\004 - Figure y figcaption.mp4
-[Sun Aug 17 01:45:28 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\06 - Imágenes y multimedia\005 - Como cargar una web externa_ un mapa y un video de youtube en mi web - iframe.mp4
-[Sun Aug 17 01:45:28 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\06 - Imágenes y multimedia\005 - Como cargar una web externa_ un mapa y un video de youtube en mi web - iframe.mp4
-[Sun Aug 17 01:45:28 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\07 - Enlaces y anclas en HTML5\001 - Enlaces.mp4
-[Sun Aug 17 01:45:28 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\07 - Enlaces y anclas en HTML5\001 - Enlaces.mp4
-[Sun Aug 17 01:45:28 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\07 - Enlaces y anclas en HTML5\002 - Anclas.mp4
-[Sun Aug 17 01:45:28 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\07 - Enlaces y anclas en HTML5\002 - Anclas.mp4
-[Sun Aug 17 01:45:28 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\08 - Tablas en HTML5\001 - Tablas de contenido en HTML.mp4
-[Sun Aug 17 01:45:28 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\08 - Tablas en HTML5\001 - Tablas de contenido en HTML.mp4
-[Sun Aug 17 01:45:28 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\09 - Elementos en línea y en bloque\001 - Diferencia entre elementos en linea y elementos en bloque.mp4
-[Sun Aug 17 01:45:28 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\09 - Elementos en línea y en bloque\001 - Diferencia entre elementos en linea y elementos en bloque.mp4
-[Sun Aug 17 01:45:28 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\10 - Formularios y validación en HTML5\001 - Crear formularios.mp4
-[Sun Aug 17 01:45:28 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\10 - Formularios y validación en HTML5\001 - Crear formularios.mp4
-[Sun Aug 17 01:45:28 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\10 - Formularios y validación en HTML5\002 - Campos para los formularios - Parte 1.mp4       
-[Sun Aug 17 01:45:28 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\10 - Formularios y validación en HTML5\002 - Campos para los formularios - Parte 1.mp4
-[Sun Aug 17 01:45:28 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\10 - Formularios y validación en HTML5\003 - Campos para los formularios - Parte 2.mp4       
-[Sun Aug 17 01:45:28 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\10 - Formularios y validación en HTML5\003 - Campos para los formularios - Parte 2.mp4
-[Sun Aug 17 01:45:28 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\10 - Formularios y validación en HTML5\004 - Validacion de formularios en HTML5.mp4
-[Sun Aug 17 01:45:28 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\10 - Formularios y validación en HTML5\004 - Validacion de formularios en HTML5.mp4
-[Sun Aug 17 01:45:28 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\11 - Más etiquetas y utilidades\001 - Mas etiquetas de HTML_ XHTML y HTML5.mp4
-[Sun Aug 17 01:45:28 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\11 - Más etiquetas y utilidades\001 - Mas etiquetas de HTML_ XHTML y HTML5.mp4
-[Sun Aug 17 01:45:28 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\11 - Más etiquetas y utilidades\002 - Favicon  Como poner icono a una pagina web.mp4
-[Sun Aug 17 01:45:28 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\11 - Más etiquetas y utilidades\002 - Favicon  Como poner icono a una pagina web.mp4
-[Sun Aug 17 01:45:28 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\001 - Ejercicio 1.mp4
-[Sun Aug 17 01:45:28 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\001 - Ejercicio 1.mp4       
-[Sun Aug 17 01:45:28 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\002 - Ejercicio 2.mp4
-[Sun Aug 17 01:45:28 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\002 - Ejercicio 2.mp4       
-[Sun Aug 17 01:45:28 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\003 - Ejercicio 3.mp4
-[Sun Aug 17 01:45:28 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\003 - Ejercicio 3.mp4       
-[Sun Aug 17 01:45:28 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\004 - Ejercicio 4.mp4
-[Sun Aug 17 01:45:28 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\004 - Ejercicio 4.mp4       
-[Sun Aug 17 01:45:28 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\005 - Ejercicio 5.mp4
-[Sun Aug 17 01:45:28 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\005 - Ejercicio 5.mp4       
-[Sun Aug 17 01:45:28 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\006 - Ejercicio 6.mp4
-[Sun Aug 17 01:45:28 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\006 - Ejercicio 6.mp4       
-[Sun Aug 17 01:45:28 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\007 - Ejercicio 7.mp4
-[Sun Aug 17 01:45:28 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\007 - Ejercicio 7.mp4       
-[Sun Aug 17 01:45:28 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\008 - Ejercicio 8.mp4
-[Sun Aug 17 01:45:28 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\008 - Ejercicio 8.mp4       
-[Sun Aug 17 01:45:28 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\009 - Ejercicio 9.mp4
-[Sun Aug 17 01:45:28 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\009 - Ejercicio 9.mp4       
-[Sun Aug 17 01:45:28 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\010 - Ejercicio 10_ 11 y 12.mp4
-[Sun Aug 17 01:45:28 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\010 - Ejercicio 10_ 11 y 12.mp4
-[Sun Aug 17 01:45:28 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\011 - Ejercicio 13 y 14 _ Final del proyecto web con HTML.mp4
-[Sun Aug 17 01:45:28 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\12 - Ejercicios + Proyecto web con HTML5 completo\011 - Ejercicio 13 y 14 _ Final del proyecto web con HTML.mp4
-[Sun Aug 17 01:45:28 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\13 - Introducción rápida a CSS\001 - Lo basico de CSS - Parte 1.mp4
-[Sun Aug 17 01:45:28 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\13 - Introducción rápida a CSS\001 - Lo basico de CSS - Parte 1.mp4
-[Sun Aug 17 01:45:28 2025] Procesando archivo: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\13 - Introducción rápida a CSS\002 - Lo basico de CSS - Parte 2.mp4
-[Sun Aug 17 01:45:28 2025] ✅ Archivo importado exitosamente: Web\Victor Robles\1 - Curso de HTML5 desde cero_ El más completo en Español\13 - Introducción rápida a CSS\002 - Lo basico de CSS - Parte 2.mp4
-[Sun Aug 17 01:45:28 2025] === IMPORTACIÓN COMPLETADA ===
-[Sun Aug 17 01:45:28 2025] Importación completada. Archivos importados: 39
-[Sun Aug 17 01:45:28 2025] ❌ ERROR en rebuild: SQLSTATE[HY000]: General error: 1 table scan_index has no column named size
-[Sun Aug 17 01:45:28 2025] Stack trace: #0 C:\xampp\htdocs\cursomyV3\app\Services\FileScanner.php(225): PDO->prepare('\r\n             ...')    
-#1 C:\xampp\htdocs\cursomyV3\app\Controllers\ScanController.php(73): FileScanner->updateScanIndex(Array)
-#2 C:\xampp\htdocs\cursomyV3\public\index.php(37): ScanController->rebuild()
+[Sun Aug 17 02:00:43 2025] PHP 8.2.12 Development Server (http://localhost:8000) started
+[Sun Aug 17 02:00:48 2025] [::1]:61814 Accepted
+[Sun Aug 17 02:00:48 2025] [::1]:62259 Accepted
+[Sun Aug 17 02:00:48 2025] [::1]:61814 [200]: GET /
+[Sun Aug 17 02:00:48 2025] [::1]:61814 Closing
+[Sun Aug 17 02:00:48 2025] [::1]:62259 [200]: GET /assets/js/main.js
+[Sun Aug 17 02:00:48 2025] [::1]:62259 Closing
+[Sun Aug 17 02:00:48 2025] [::1]:63866 Accepted
+[Sun Aug 17 02:00:48 2025] [::1]:63866 [200]: GET /assets/js/dashboard/index.js
+[Sun Aug 17 02:00:48 2025] [::1]:63866 Closing
+[Sun Aug 17 02:00:48 2025] [::1]:58424 Accepted
+[Sun Aug 17 02:00:48 2025] [::1]:61619 Accepted
+[Sun Aug 17 02:00:48 2025] [::1]:58424 [200]: GET /api/dashboard/stats
+[Sun Aug 17 02:00:48 2025] [::1]:58424 Closing
+[Sun Aug 17 02:00:48 2025] [::1]:61619 [200]: GET /api/dashboard/courses
+[Sun Aug 17 02:00:48 2025] [::1]:61619 Closing
+[Sun Aug 17 02:00:51 2025] [::1]:57025 Accepted
+[Sun Aug 17 02:00:51 2025] PHP Fatal error:  Uncaught Error: Cannot access protected property CourseRepository::$db in C:\xampp\htdocs\cursomyV3\app\Controllers\SearchController.php:131
+Stack trace:
+#0 C:\xampp\htdocs\cursomyV3\app\Controllers\SearchController.php(60): SearchController->searchCourses('h', 10)
+#1 C:\xampp\htdocs\cursomyV3\app\Controllers\SearchController.php(39): SearchController->performSearch('h', 10)
+#2 C:\xampp\htdocs\cursomyV3\public\index.php(54): SearchController->search()
 #3 C:\xampp\htdocs\cursomyV3\app\Router.php(40): {closure}()
-#4 C:\xampp\htdocs\cursomyV3\public\index.php(54): Router->dispatch('POST', '/api/scan/rebui...')
+#4 C:\xampp\htdocs\cursomyV3\public\index.php(61): Router->dispatch('GET', '/api/search')
 #5 {main}
-[Sun Aug 17 01:45:28 2025] [::1]:64635 [400]: POST /api/scan/rebuild    
-[Sun Aug 17 01:45:28 2025] [::1]:64635 Closing
+  thrown in C:\xampp\htdocs\cursomyV3\app\Controllers\SearchController.php on line 131
+[Sun Aug 17 02:00:51 2025] [::1]:57025 [200]: GET /api/search?q=h&limit=10 - Uncaught Error: Cannot access protected property CourseRepository::$db in C:\xampp\htdocs\cursomyV3\app\Controllers\SearchController.php:131
+Stack trace:
+#0 C:\xampp\htdocs\cursomyV3\app\Controllers\SearchController.php(60): SearchController->searchCourses('h', 10)
+#1 C:\xampp\htdocs\cursomyV3\app\Controllers\SearchController.php(39): SearchController->performSearch('h', 10)
+#2 C:\xampp\htdocs\cursomyV3\public\index.php(54): SearchController->search()
+#3 C:\xampp\htdocs\cursomyV3\app\Router.php(40): {closure}()
+#4 C:\xampp\htdocs\cursomyV3\public\index.php(61): Router->dispatch('GET', '/api/search')
+#5 {main}
+  thrown in C:\xampp\htdocs\cursomyV3\app\Controllers\SearchController.php on line 131
+[Sun Aug 17 02:00:51 2025] [::1]:57025 Closing
+[Sun Aug 17 02:00:51 2025] [::1]:57990 Accepted
+[Sun Aug 17 02:00:51 2025] PHP Fatal error:  Uncaught Error: Cannot access protected property CourseRepository::$db in C:\xampp\htdocs\cursomyV3\app\Controllers\SearchController.php:131
+Stack trace:
+#0 C:\xampp\htdocs\cursomyV3\app\Controllers\SearchController.php(60): SearchController->searchCourses('ht', 10)
+#1 C:\xampp\htdocs\cursomyV3\app\Controllers\SearchController.php(39): SearchController->performSearch('ht', 10)
+#2 C:\xampp\htdocs\cursomyV3\public\index.php(54): SearchController->search()
+#3 C:\xampp\htdocs\cursomyV3\app\Router.php(40): {closure}()
+#4 C:\xampp\htdocs\cursomyV3\public\index.php(61): Router->dispatch('GET', '/api/search')
+#5 {main}
+  thrown in C:\xampp\htdocs\cursomyV3\app\Controllers\SearchController.php on line 131
+[Sun Aug 17 02:00:51 2025] [::1]:57990 [200]: GET /api/search?q=ht&limit=10 - Uncaught Error: Cannot access protected property CourseRepository::$db in C:\xampp\htdocs\cursomyV3\app\Controllers\SearchController.php:131
+Stack trace:
+#0 C:\xampp\htdocs\cursomyV3\app\Controllers\SearchController.php(60): SearchController->searchCourses('ht', 10)
+#1 C:\xampp\htdocs\cursomyV3\app\Controllers\SearchController.php(39): SearchController->performSearch('ht', 10)
+#2 C:\xampp\htdocs\cursomyV3\public\index.php(54): SearchController->search()
+#3 C:\xampp\htdocs\cursomyV3\app\Router.php(40): {closure}()
+#4 C:\xampp\htdocs\cursomyV3\public\index.php(61): Router->dispatch('GET', '/api/search')
+#5 {main}
+  thrown in C:\xampp\htdocs\cursomyV3\app\Controllers\SearchController.php on line 131
+[Sun Aug 17 02:00:51 2025] [::1]:57990 Closing

@@ -84,7 +84,7 @@ class Dashboard {
                 </div>
             `;
         } else {
-            const resultsHtml = results.map(result => this.createSearchResultItem(result)).join('');
+            const resultsHtml = results.map(result => this.createSearchResultItem(result, query)).join('');
             searchResults.innerHTML = resultsHtml;
         }
         
@@ -94,7 +94,7 @@ class Dashboard {
     /**
      * Crea un elemento de resultado de búsqueda
      */
-    createSearchResultItem(result) {
+    createSearchResultItem(result, query) {
         const typeIcon = this.getTypeIcon(result.type);
         const typeColor = this.getTypeColor(result.type);
         
@@ -109,7 +109,7 @@ class Dashboard {
                     </div>
                     <div class="flex-1 min-w-0">
                         <div class="text-sm font-medium text-slate-100 truncate">
-                            ${this.highlightQuery(result.title, result.query)}
+                            ${this.highlightQuery(result.title, query)}
                         </div>
                         <div class="text-xs text-slate-400 truncate">
                             ${result.subtitle}
